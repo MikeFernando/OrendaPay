@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../dist/output.css" />
+  <title>Home</title>
+</head>
+
+<body class="bg-secondary">
+  <header class="flex flex-col justify-center">
+    <div class="flex items-center justify-between px-14 pt-[72px]">
+      <div class="text-white text-xl font-bold font-['Poppins']">
+        <h2 class="mb-2">
+          Olá, Cliente!
+        </h2>
+        <p class="text-xs font-medium">
+          saldo disponível
+        </p>
+        <span>R$ 0.000,00</span>
+      </div>
+      <img src="../assets/svg/user.svg" alt="foto de perfil" />
+    </div>
+  
+    <span class="block mt-2 mb-4 border-t border-primary mx-7"></span>
+  
+    <div class="flex gap-5 mx-auto">
+      <div class="flex flex-col items-center justify-center gap-1">
+        <button class="flex items-center justify-center w-10 h-10 bg-white rounded h-w-12">
+          <img class="w-5 h-5" src="../assets/svg/pix.svg" alt="Pix" />
+        </button>
+        <span class="font-medium text-xs font-['Poppins'] text-center text-white">Pix</span>
+      </div>
+  
+      <div class="flex flex-col items-center justify-center gap-1">
+        <button class="flex items-center justify-center w-10 h-10 bg-white rounded h-w-12">
+          <img class="w-5 h-5" src="../assets/svg/resgate.svg" alt="Resgatar" />
+        </button>
+        <span class="font-medium text-xs font-['Poppins'] text-center text-white">Resgatar</span>
+      </div>
+  
+      <div class="flex flex-col items-center justify-center gap-1">
+        <button class="flex items-center justify-center w-10 h-10 bg-white rounded h-w-12">
+          <img class="w-5 h-5" src="../assets/svg/transfer.svg" alt="Transferir" />
+        </button>
+        <span class="font-medium text-xs font-['Poppins'] text-center text-white">Transferir</span>
+      </div>
+  
+      <div class="flex flex-col items-center justify-center gap-1">
+        <button class="flex items-center justify-center w-10 h-10 bg-white rounded h-w-12">
+          <img class="w-5 h-5" src="../assets/svg/barcode.svg" alt="Pagar" />
+        </button>
+        <span class="font-medium text-xs font-['Poppins'] text-center text-white">Pagar</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-2 bg-[#F5F5F5] rounded-t-2xl mt-3 pt-8 px-3 pb-16 scroll">
+    <p class="font-medium ml-4 text-base text-[#7F868D] mb-1">
+      Ferramentas
+    </p>
+
+    <div class="space-y-3">
+      <button class="flex items-center w-full px-3 py-2 text-sm text-left bg-white rounded-md text-secondary">
+        <img class="ml-1 mr-[10px]" src="../assets/svg/dolar.svg" alt="Criar Cobrança" />
+        Criar Cobrança
+        <img class="ml-auto" src="../assets/svg/ic_arrow.svg" />
+      </button>
+
+      <button class="flex items-center w-full px-3 py-2 text-sm text-left bg-white rounded-md text-secondary">
+        <img class="ml-1 mr-[10px]" src="../assets/svg/view.svg" alt="Criar Cobrança" />
+        Minhas Cobranças
+        <img class="ml-auto" src="../assets/svg/ic_arrow.svg" />
+      </button>
+
+      <button class="flex items-center w-full px-3 py-2 text-sm text-left bg-white rounded-md text-secondary">
+        <img class="ml-1 mr-[10px]" src="../assets/svg/link.svg" alt="Criar Cobrança" />
+        Criar Link
+        <img class="ml-auto" src="../assets/svg/ic_arrow.svg" />
+      </button>
+      
+      <button class="flex items-center w-full px-3 py-2 text-sm text-left bg-white rounded-md text-secondary">
+        <img class="ml-1 mr-[10px]" src="../assets/svg/card.svg" alt="Criar Cobrança" />
+        Vendas Cartão
+        <img class="ml-auto" src="../assets/svg/ic_arrow.svg" />
+      </button>
+
+      <button class="flex items-center w-full px-3 py-2 text-sm text-left bg-white rounded-md text-secondary">
+        <img class="ml-1 mr-[10px]" src="../assets/svg/simulate.svg" alt="Criar Cobrança" />
+        Simulador de Vendas
+        <img class="ml-auto" src="../assets/svg/ic_arrow.svg" />
+      </button>
+    </div>
+
+    <span class="block w-[70%] mx-auto my-3 border-b border-divider"></span>
+
+    <p class="font-medium ml-4 text-base text-[#7F868D] mb-1">
+      Novidades
+    </p>
+
+    <div class="relative flex items-center justify-center py-16 text-white px-14 bg-divider rounded-2xl">
+      BANNERS PASSANDO
+    </div>
+  </main>
+  
+  <nav aria-label="navegação-principal" class="fixed flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+       <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+       </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
