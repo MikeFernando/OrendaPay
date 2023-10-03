@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Poppins:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-primary rounded-lg text-white font-bold text-base font-sans px-9 py-3
+  }
+
+  .btn-outline {
+    @apply bg-white border-2 border-primary rounded-lg text-primary font-bold text-base font-sans px-9 py-3
+  }
+
+  .wrapper-input {
+    @apply flex items-center gap-3 border border-divider py-2 px-4 rounded
+  }
+
+  .input {
+    @apply placeholder:text-base placeholder:text-placeholder outline-none text-secondary
+  }
+}

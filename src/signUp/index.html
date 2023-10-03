@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <title>SignUp</title>
+</head>
+<body>
+  <header class="bg-secondary flex justify-between items-center h-[125px] rounded-b-[22px] pl-3 pr-11">
+    <a href="../signIn">
+      <img src="../assets/svg/arrow-back.svg" alt="voltar">
+    </a>
+    <p class="font-sans text-base font-bold text-white">
+      Inscreva-se
+    </p>
+    <div />
+  </header>
+
+  <main class="px-5">
+    <form action="" class="mt-8 space-y-3">
+      <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="text" placeholder="Nome completo">
+      <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="email" placeholder="E-mail">
+      <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="text" placeholder="CPF ou CNPJ">
+      <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="text" placeholder="Telefone celular">
+      <span class="text-xs text-black font-['Poppins']">
+        *Enviaremos um código SMS de confirmação.
+      </span>
+      <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="password" placeholder="Senha">
+
+      <div class="flex items-start gap-2 mt-4">
+          <input id="orange-checkbox" type="checkbox" value="" class="w-5 h-5">
+          <label for="termos" class="text-xs text-black font-['Poppins']">
+            Estou de acordo com os <a href="https://www.orendapay.com.br/Termos_de_uso_orendapay.pdf" class="underline">Termos de uso</a> e com a <a href="https://www.orendapay.com.br/Politica-de-privacidade-e-Sigilo-OrendaPay.pdf" class="underline">política de privacidade</a> 
+          </label>
+      </div>
+
+      <div class="flex flex-col items-center justify-center">
+        <button class="btn w-[300px] mt-4">
+          <a href="./validation.html">
+            Enviar Dados
+          </a>
+        </button>
+
+        <a href="" class="mt-4 font-bold underline text-primary">
+          Já tem uma conta?
+        </a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
