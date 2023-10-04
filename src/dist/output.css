@@ -610,6 +610,10 @@ html {
   color: rgb(155 160 172 / var(--tw-text-opacity));
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
