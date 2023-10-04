@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <title>Transferir</title>
+</head>
+
+<body class="bg-main">
+  <div class="pb-3 bg-secondary">
+    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+      <a href="../home">
+        <img src="../assets/svg/arrow-back.svg" alt="voltar">
+      </a>
+      <p class="font-sans text-base font-bold text-white ">
+        Transferir
+      </p>
+      <div />
+    </header>
+  </div>
+
+  <main class="px-5 pb-20 mt-3 -translate-y-6 bg-main rounded-t-2xl">
+    <form class="py-4">
+      <label for="bank" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+        <img src="../assets/transfer-icons/fa_bank.svg" alt="bank">
+        Banco
+      </label>
+      <div class="bg-white wrapper-input">
+        <input
+          class="bg-white placeholder:text-secondary" 
+          type="bank" 
+          placeholder="Selecione um banco..."
+        >
+      </div>
+
+      <label for="current-account" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
+        <img src="../assets/transfer-icons/fa6-solid_money-check.svg" alt="bank">
+        Tipo de conta
+      </label>
+      <div class="bg-white wrapper-input">
+        <input
+          class="bg-white placeholder:text-secondary" 
+          type="number" 
+          placeholder="Conta corrente"
+        >
+      </div>
+
+      <div class="grid grid-cols-2 gap-5">
+        <div class="flex flex-col">
+          <label for="agency" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
+            Agência
+          </label>
+          <div class="bg-white wrapper-input">
+            <input
+              id="agency"
+              class="w-full bg-white placeholder:text-secondary" 
+              type="text" 
+            >
+          </div>
+          <span class="text-xs text-gray">*Sem o dígito</span>
+        </div>
+
+       <div class="flex flex-col">
+        <label for="account" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
+          Conta
+        </label>
+        <div class="bg-white wrapper-input">
+          <input
+            id="account"
+            class="w-full bg-white placeholder:text-secondary" 
+            type="text" 
+          >
+        </div>
+        <span class="text-xs text-gray">*Com o dígito</span>
+       </div>
+      </div>
+
+      <label for="name" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
+        <img src="../assets/transfer-icons/mdi_person.svg" alt="ícone usuário">
+        Nome Completo <span class="font-normal">do favorecido</span>
+      </label>
+      <div class="bg-white wrapper-input">
+        <input
+          id="name"
+          class="bg-white placeholder:text-placeholder" 
+          type="text" 
+          placeholder="Nome"
+        >
+      </div>
+
+      <label for="email" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
+        <img src="../assets/transfer-icons/icon-park-outline_id-card.svg" alt="ícone usuário">
+        CPF ou CNPJ <span class="font-normal">do favorecido</span>
+      </label>
+      <div class="bg-white wrapper-input">
+        <input
+          class="bg-whiteplaceholder:text-placeholder" 
+          type="number" 
+          placeholder="000.000.000-00"
+        >
+      </div>
+
+      <span class="block w-[75%] mx-auto my-3 border-b border-divider"></span>
+
+      <div class="grid grid-cols-2 gap-5">
+        <div class="flex flex-col">
+          <label for="value" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+            Valor
+          </label>
+          <div class="flex border rounded border-divider">
+            <span class="flex items-center justify-center w-3 h-3 p-4 text-sm font-bold bg-divider text-gray">
+              R$
+            </span>
+            <input class="w-full px-2 outline-none text-secondary" type="number">
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="value" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+            Data
+          </label>
+          <div class="flex border rounded border-divider">
+            <img class="w-8 h-8" src="../assets/transfer-icons/zondicons_calendar.svg" alt="">
+            <input class="w-full outline-none" type="number">
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 mb-1">
+        <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
+          <img src="../assets/transfer-icons/bx_edit.svg" alt="ícone editar">
+          Descrição
+        </label>
+        <textarea
+          class="w-full p-3 border resize-none placeholder:text-placeholder text-secondary border-divider"
+          id="description"
+          placeholder="Exemplo: Pagamento pelos serviços de Marketing Digital"
+        ></textarea>
+      </div>
+
+      <div class="flex items-center justify-center my-12">
+        <a class="btn" href="">
+          Confirmar transferência
+        </a>
+      </div>
+    </form>
+  </main>
+
+  <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

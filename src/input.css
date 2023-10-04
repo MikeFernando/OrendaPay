@@ -24,6 +24,6 @@
   }
 
   .input {
-    @apply placeholder:text-base placeholder:text-placeholder outline-none text-secondary
+    @apply placeholder:text-base outline-none text-secondary
   }
 }
