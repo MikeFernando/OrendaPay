@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <title>Resgate</title>
+</head>
+
+<body class="bg-main">
+  <div class="h-56 pb-3 bg-secondary">
+    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+      <a href="../index.html">
+        <img src="../assets/svg/arrow-back.svg" alt="voltar">
+      </a>
+      <p class="font-sans text-base font-bold text-white ">
+        Solicitação de Resgate
+      </p>
+      <div />
+    </header>
+  
+    <div class="px-5 py-3 mx-5 border rounded-2xl border-primary">
+      <p class="text-base font-bold text-white">R$ 0,00</p>
+      <span class="text-sm text-divider font-['Poppins']">Valor disponível para resgate</span>
+    </div>
+  </div>
+
+  <main class="pt-8 pb-16 mt-3 -translate-y-6 px-7 bg-main rounded-t-2xl">
+    <form action="">
+      <p class="pb-2 text-base text-black">Informe abaixo o valor desejado</p>
+      <div class="flex">
+        <div class="w-12 h-12 rounded-l bg-[#D9D9D9] flex items-center justify-center">
+          <span class="text-sm font-bold text-gray">R$</span>
+        </div>
+        <input class="flex-1 pl-3 placeholder:font-['Poppins'] outline-none" type="number" placeholder="VALOR TOTAL">
+      </div>
+
+      <span class="text-xs text-gray font-['Poppins']">
+        * O valor mínimo para solicitar resgates é de R$ 2,00
+      </span>
+
+      <div class="flex items-center justify-center flex-1 mt-8">
+        <a href="#" class="w-full mx-8 text-base text-center btn">
+          Solicitar Resgate
+        </a>
+      </div>
+    </form>
+
+    <p class="mt-6 font-bold text-center text-secondary">Como funciona o resgate?</p>
+    <p class="mt-2 text-xs text-center text-secondary">- Após a solicitação do resgate você receberá uma confirmação por e-mail.</p>
+    <p class="mt-1 text-xs text-center text-secondary">- Em até 2 dias úteis você receberá o valor em sua conta bancária cadastrada.</p>
+
+
+    <a href="" class="block mt-8 text-xs font-bold text-center underline text-primary">
+      VISUALIZAR HISTÓRICO DE RESGATES
+    </a>
+  </main>
+
+  <nav aria-label="navegação-principal" class="absolute bottom-0 flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
