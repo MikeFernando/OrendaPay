@@ -11,6 +11,7 @@ module.exports = {
         secondary: '#333132',
         divider: '#CED4DA',
         placeholder: '#9BA0AC',
+        main: '#F5F5F5'
       }
     },
   },
