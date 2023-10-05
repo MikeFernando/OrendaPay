@@ -931,6 +931,10 @@ html {
   gap: 1.25rem;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1149,6 +1153,10 @@ html {
   padding-top: 6rem;
 }
 
+.pt-3{
+  padding-top: 0.75rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1195,6 +1203,10 @@ html {
 
 .font-normal{
   font-weight: 400;
+}
+
+.leading-tight{
+  line-height: 1.25;
 }
 
 .text-\[\#7F868D\]{

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <title>Realizar Pagamento</title>
+</head>
+
+<body>
+  <div class="pb-3 bg-secondary">
+    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+      <a href="../transfer">
+        <img src="../assets/svg/arrow-back.svg" alt="voltar">
+      </a>
+      <p class="font-sans text-base font-bold text-white ">
+        Realizar Pagamento
+      </p>
+      <div />
+    </header>
+  </div>
+
+  <main class="px-5 pt-3 pb-20 mt-3 -translate-y-6 bg-white rounded-t-2xl">
+    <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
+      <img src="../assets/transfer-icons/bx_edit.svg" alt="ícone editar">
+      Linha digitável
+    </label>
+
+    <div class="bg-white wrapper-input">
+      <input id="name" class="bg-white placeholder:text-placeholder" type="text">
+    </div>
+    <p class="text-xs text-secondary font-['Poppins'] mt-3">
+      Copie a linha digitável de seu título de pagamento, ative o leitor ou faça upload de um arquivo.
+    </p>
+
+    <div class="flex items-center justify-center gap-4 mt-12">
+        <button class="flex items-start justify-center w-full btn-outline">
+          <img src="../assets/svg/camera.svg" alt="camera">
+        </button>
+        <button class="flex items-center justify-center w-full btn-outline">
+          <img src="../assets/svg/upload.svg" alt="upload">
+        </button>
+    </div>
+
+    <div class="flex items-center justify-center mt-10">
+      <a class="btn" href="">
+        Processar Pagamento
+      </a>
+    </div>
+  </main>
+
+  <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
