@@ -647,14 +647,14 @@ html {
   margin-right: auto;
 }
 
-.my-3{
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mb-1{
@@ -737,6 +737,18 @@ html {
   margin-top: 2rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -797,6 +809,10 @@ html {
   height: 184px;
 }
 
+.h-16{
+  height: 4rem;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -847,6 +863,10 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-16{
+  width: 4rem;
 }
 
 .max-w-\[334px\]{
@@ -1068,6 +1088,11 @@ html {
   padding-bottom: 1rem;
 }
 
+.px-11{
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -1118,6 +1143,10 @@ html {
 
 .pt-\[72px\]{
   padding-top: 72px;
+}
+
+.pt-24{
+  padding-top: 6rem;
 }
 
 .text-left{
