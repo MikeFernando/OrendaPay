@@ -1201,6 +1201,10 @@ html {
   padding-top: 72px;
 }
 
+.pb-48{
+  padding-bottom: 12rem;
+}
+
 .text-left{
   text-align: left;
 }
