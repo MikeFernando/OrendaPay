@@ -610,10 +610,6 @@ html {
   position: fixed;
 }
 
-.absolute{
-  position: absolute;
-}
-
 .relative{
   position: relative;
 }
@@ -657,12 +653,20 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.-mb-px{
+  margin-bottom: -1px;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
 
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
 }
 
 .mb-28{
@@ -699,6 +703,10 @@ html {
 
 .ml-auto{
   margin-left: auto;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .mr-3{
@@ -749,10 +757,6 @@ html {
   margin-top: 2rem;
 }
 
-.mb-20{
-  margin-bottom: 5rem;
-}
-
 .block{
   display: block;
 }
@@ -767,10 +771,6 @@ html {
 
 .grid{
   display: grid;
-}
-
-.hidden{
-  display: none;
 }
 
 .h-10{
@@ -797,6 +797,10 @@ html {
   height: 0.75rem;
 }
 
+.h-44{
+  height: 11rem;
+}
+
 .h-5{
   height: 1.25rem;
 }
@@ -819,10 +823,6 @@ html {
 
 .h-\[184px\]{
   height: 184px;
-}
-
-.h-44{
-  height: 11rem;
 }
 
 .w-10{
@@ -911,6 +911,10 @@ html {
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .items-start{
   align-items: flex-start;
 }
@@ -993,12 +997,21 @@ html {
   border-top-right-radius: 1rem;
 }
 
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border{
   border-width: 1px;
 }
 
 .border-b{
   border-bottom-width: 1px;
+}
+
+.border-b-2{
+  border-bottom-width: 2px;
 }
 
 .border-t{
@@ -1013,6 +1026,10 @@ html {
 .border-primary{
   --tw-border-opacity: 1;
   border-color: rgb(245 131 31 / var(--tw-border-opacity));
+}
+
+.border-transparent{
+  border-color: transparent;
 }
 
 .border-white{
@@ -1040,9 +1057,18 @@ html {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 131 31 / var(--tw-bg-opacity));
+}
+
 .bg-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(51 49 50 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 .bg-white{
@@ -1050,27 +1076,9 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-transparent{
-  background-color: transparent;
-}
-
-.bg-primary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 131 31 / var(--tw-bg-opacity));
-}
-
-.bg-cover{
-  background-size: cover;
-}
-
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-bottom{
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 
 .p-3{
@@ -1141,6 +1149,11 @@ html {
   padding-bottom: 1rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -1161,8 +1174,16 @@ html {
   padding-bottom: 0.75rem;
 }
 
+.pb-48{
+  padding-bottom: 12rem;
+}
+
 .pb-7{
   padding-bottom: 1.75rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
 }
 
 .pl-3{
@@ -1171,6 +1192,10 @@ html {
 
 .pr-11{
   padding-right: 2.75rem;
+}
+
+.pr-7{
+  padding-right: 1.75rem;
 }
 
 .pt-14{
@@ -1199,10 +1224,6 @@ html {
 
 .pt-\[72px\]{
   padding-top: 72px;
-}
-
-.pb-48{
-  padding-bottom: 12rem;
 }
 
 .text-left{
@@ -1271,6 +1292,11 @@ html {
 .text-gray{
   --tw-text-opacity: 1;
   color: rgb(155 160 172 / var(--tw-text-opacity));
+}
+
+.text-green{
+  --tw-text-opacity: 1;
+  color: rgb(40 167 69 / var(--tw-text-opacity));
 }
 
 .text-primary{
@@ -1386,4 +1412,21 @@ html {
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(245 131 31 / var(--tw-border-opacity));
+}
+
+@media (prefers-color-scheme: dark){
+  .dark\:border-primary{
+    --tw-border-opacity: 1;
+    border-color: rgb(245 131 31 / var(--tw-border-opacity));
+  }
+
+  .dark\:text-primary{
+    --tw-text-opacity: 1;
+    color: rgb(245 131 31 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
