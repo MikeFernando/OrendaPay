@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/output.css">
-  <title>Realizar Pagamento</title>
+  <title>Criar Cobrança</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <img src="../assets/svg/arrow-back.svg" alt="voltar">
       </a>
       <p class="font-sans text-base font-bold text-white ">
-        Realizar Pagamento
+        Criar Cobrança
       </p>
       <div />
     </header>
@@ -23,31 +23,20 @@
 
   <main class="px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-white rounded-t-2xl">
     <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
-      <img src="../assets/transfer-icons/bx_edit.svg" alt="ícone editar">
-      Linha digitável
+      Escolha o(s) cliente(s)
     </label>
     <div class="bg-white wrapper-input">
-      <input id="name" class="bg-white placeholder:text-placeholder" type="text">
-    </div>
-    
-    <p class="text-xs text-secondary font-['Poppins'] mt-3">
-      Copie a linha digitável de seu título de pagamento, ative o leitor ou faça upload de um arquivo.
-    </p>
-
-    <div class="flex items-center justify-center gap-4 mt-12">
-        <a href="./camera.html" class="flex items-start justify-center w-full btn-outline">
-          <img src="../assets/svg/camera.svg" alt="camera">
-        </a>
-        <a href="#" class="flex items-center justify-center w-full btn-outline">
-          <img src="../assets/svg/upload.svg" alt="upload">
-        </a>
+      <input id="name" class="bg-white placeholder:text-placeholder" type="text" placeholder="Nome...">
     </div>
 
-    <div class="flex items-center justify-center mt-10">
-      <a class="btn" href="">
-        Processar Pagamento
-      </a>
-    </div>
+    <a href="#" class="flex items-center px-6 py-3 font-bold text-white bg-green max-w-[190px] rounded-xl mt-3">
+      <img class="w-6 h-6 mr-3" src="../assets/svg/fluent_person-add-20-filled.svg" alt="ícone usuário">
+      Novo Cliente
+    </a>
+
+    <a href="./history.html" class="block text-base font-bold text-center underline mt-14 text-primary mb-28">
+      Ver minhas cobranças
+    </a>
   </main>
 
   <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
