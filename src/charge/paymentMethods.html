@@ -21,21 +21,69 @@
     </header>
   </div>
 
-  <main class="px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-white rounded-t-2xl">
+  <main class="min-h-screen px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-main rounded-t-2xl">
     <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
       Escolha o(s) cliente(s)
     </label>
-    <div class="bg-white wrapper-input">
-      <input id="name" class="bg-white placeholder:text-placeholder" type="text" placeholder="Nome...">
+    <div class="flex w-full h-12 px-1 py-1 bg-white rounded-md">
+      <div class="bg-[#09F] text-white rounded-md w-64 text-base mr-2 flex justify-center items-center px-2 min-w-[253px]">
+        Nome sobrenome - CPF...
+        <a class="ml-4 cursor-pointer">
+          <img src="../assets/svg/x.svg" alt="fechar">
+        </a>
+      </div>
+      <input id="name" class="bg-white placeholder:text-placeholder w-[20%] px-2 outline-none text-secondary" type="text" placeholder="Nome...">
     </div>
 
-    <a href="../charge/paymentMethods.html" class="flex items-center px-6 py-3 font-bold text-white bg-green max-w-[190px] rounded-xl mt-3">
+    <a href="#" class="flex items-center px-6 py-3 font-bold text-white bg-green max-w-[190px] rounded-xl mt-3">
       <img class="w-6 h-6 mr-3" src="../assets/svg/fluent_person-add-20-filled.svg" alt="ícone usuário">
       Novo Cliente
     </a>
 
+    <span class="block w-[75%] mx-auto my-8 border-b border-divider"></span>
+
+    <div class="flex items-center">
+      <span class="font-['Poppins'] text-sm text-gray mr-1">Selecione o meio de pagamento</span>
+      <span>
+        <img src="../assets/svg/tabler_hand-click.svg" alt="click">
+      </span>
+    </div>
+
+    <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <div>
+        <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
+      </div>
+      <a href="#" >
+        Boleto
+      </a>
+    </div>
+    <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <div>
+        <img src="../assets/transfer-icons/pix.svg" alt="pix">
+      </div>
+      <a href="#">
+        Pix
+      </a>
+    </div>
+    <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <div>
+        <img src="../assets/transfer-icons/debit.svg" alt="Débito">
+      </div>
+      <a href="#">
+        Débito
+      </a>
+    </div>
+    <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <div>
+        <img src="../assets/transfer-icons/credit.svg" alt="Crédito">
+      </div>
+      <a href="#">
+        Crédito
+      </a>
+    </div>
+
     <a href="./history.html" class="block text-base font-bold text-center underline mt-14 text-primary mb-28">
-      Ver minhas cobranças
+      Ir para Link de Pagamento
     </a>
   </main>
 
