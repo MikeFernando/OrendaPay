@@ -577,6 +577,7 @@ html {
 
 .wrapper-input{
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 0.75rem;
   border-radius: 0.25rem;
@@ -799,6 +800,10 @@ html {
   margin-top: 2rem;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .block{
   display: block;
 }
@@ -903,12 +908,20 @@ html {
   width: 1.25rem;
 }
 
+.w-52{
+  width: 13rem;
+}
+
 .w-6{
   width: 1.5rem;
 }
 
 .w-64{
   width: 16rem;
+}
+
+.w-\[10\%\]{
+  width: 10%;
 }
 
 .w-\[20\%\]{
@@ -939,40 +952,12 @@ html {
   width: 100%;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .w-28{
   width: 7rem;
-}
-
-.w-40{
-  width: 10rem;
-}
-
-.w-52{
-  width: 13rem;
-}
-
-.w-48{
-  width: 12rem;
-}
-
-.w-44{
-  width: 11rem;
-}
-
-.w-\[60\%\]{
-  width: 60%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
-}
-
-.w-\[10\%\]{
-  width: 10%;
-}
-
-.w-\[15\%\]{
-  width: 15%;
 }
 
 .min-w-\[253px\]{
@@ -1223,6 +1208,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray{
+  --tw-bg-opacity: 1;
+  background-color: rgb(155 160 172 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1449,6 +1439,11 @@ html {
 .text-\[\#7F868D\]{
   --tw-text-opacity: 1;
   color: rgb(127 134 141 / var(--tw-text-opacity));
+}
+
+.text-\[\#D61212\]{
+  --tw-text-opacity: 1;
+  color: rgb(214 18 18 / var(--tw-text-opacity));
 }
 
 .text-black{

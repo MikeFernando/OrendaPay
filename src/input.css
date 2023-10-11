@@ -20,7 +20,7 @@
   }
 
   .wrapper-input {
-    @apply flex items-center gap-3 border border-divider py-2 px-4 rounded
+    @apply flex w-full items-center gap-3 border border-divider py-2 px-4 rounded
   }
 
   .input {
