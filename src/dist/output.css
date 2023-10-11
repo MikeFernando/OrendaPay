@@ -684,6 +684,10 @@ html {
   margin-bottom: 0.25rem;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -798,10 +802,6 @@ html {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mb-16{
-  margin-bottom: 4rem;
 }
 
 .block{
@@ -950,14 +950,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-32{
-  width: 8rem;
-}
-
-.w-28{
-  width: 7rem;
 }
 
 .min-w-\[253px\]{
@@ -1179,6 +1171,11 @@ html {
   background-color: rgb(206 212 218 / var(--tw-bg-opacity));
 }
 
+.bg-gray{
+  --tw-bg-opacity: 1;
+  background-color: rgb(155 160 172 / var(--tw-bg-opacity));
+}
+
 .bg-green{
   --tw-bg-opacity: 1;
   background-color: rgb(40 167 69 / var(--tw-bg-opacity));
@@ -1206,11 +1203,6 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-gray{
-  --tw-bg-opacity: 1;
-  background-color: rgb(155 160 172 / var(--tw-bg-opacity));
 }
 
 .object-cover{
