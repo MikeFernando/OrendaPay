@@ -676,11 +676,6 @@ html {
   margin-bottom: 2rem;
 }
 
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .-mb-px{
   margin-bottom: -1px;
 }
@@ -1049,10 +1044,6 @@ html {
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-14{
-  gap: 3.5rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
