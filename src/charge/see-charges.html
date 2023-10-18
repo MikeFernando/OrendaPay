@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/output.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
   <title>Visualizar Cobranças</title>
 </head>
 
@@ -22,7 +23,172 @@
   </div>
 
   <main class="pb-20 mt-3 -translate-y-6 bg-main rounded-t-2xl">
-    <p class="px-5 pt-4 mb-3 text-xs text-secondary">Hoje - 15 de Agosto</p>
+    <div class="flex items-center justify-between px-5">
+      <p class="pt-4 mb-3 text-xs text-secondary">Hoje - 15 de Agosto</p>
+      <button
+        type="button"
+        id="dropdownCheckboxButton"
+        data-dropdown-toggle="dropdownDefaultCheckbox"
+      >
+        <img src="../assets/svg/mi_filter.svg" alt="filtrar">
+      </button>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div id="dropdownDefaultCheckbox" class="z-10 hidden w-full min-h-screen bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+      <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCheckboxButton">
+        <!-- Todas -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-1" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300 checked:text-primary">
+              Todas
+            </label>
+            <input id="checkbox-item-1" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- A receber -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-2" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              A receber
+            </label>
+            <input id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Vencida -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-3" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Vencida
+            </label>
+            <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Paga -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-4" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Paga
+            </label>
+            <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Cancelada -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-5" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Cancelada
+            </label>
+            <input id="checkbox-item-5" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Recorrente -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-dashed border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Recorrente
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        
+        <p class="font-bold text-secondary">
+          Tipo de Transação
+        </p>
+
+        <!-- Cartão -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-7" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Cartão
+            </label>
+            <input id="checkbox-item-7" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Boleto -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-8" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Boleto
+            </label>
+            <input id="checkbox-item-8" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Pix -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-dashed border-divider text-gray-dark">
+            <label for="checkbox-item-9" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Pix
+            </label>
+            <input id="checkbox-item-9" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+
+        <p class="font-bold text-secondary">
+          Tipo de Transação
+        </p>
+
+        <!-- Liq. Manual -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Liq. Manual
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Pré-Autorização -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Pré-Autorização
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Disputa -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Disputa
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Chargeback -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Chargeback
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Venc/Baixado -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Venc/Baixado
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+        <!-- Link de Pagamento -->
+        <li>
+          <div class="flex items-center justify-between pb-2 text-base border-b border-dashed border-divider text-gray-dark">
+            <label for="checkbox-item-6" class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300">
+              Link de Pagamento
+            </label>
+            <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary focus:ring-primary">
+          </div>
+        </li>
+
+        <button class="flex justify-center w-full text-base underline text-primary">
+          Aplicar
+        </button>
+      </ul>
+    </div>
+
 
     <div class="flex items-center px-5 py-4 bg-white">
       <div class="mr-5">
@@ -241,6 +407,8 @@
       </li>
     </ul>
   </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 
 </html>
