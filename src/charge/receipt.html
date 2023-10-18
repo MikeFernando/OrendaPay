@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <title>Visualizar Cobranças</title>
+</head>
+
+<body class="bg-main">
+  <div class="pb-3 bg-secondary">
+    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+      <a href="../charge/new-client.html">
+        <img src="../assets/svg/arrow-back.svg" alt="voltar">
+      </a>
+      <p class="font-sans text-base font-bold text-white ">
+        Visualizar Cobranças
+      </p>
+      <div />
+    </header>
+  </div>
+
+  <main class="px-5 pb-20 mt-3 -translate-y-6 bg-white pt-7 rounded-t-2xl">
+    <div class="flex items-center -mb-4">
+      <img src="../assets/svg/link-orange.svg"  alt="link">
+      <p class="ml-3 font-bold text-secondary">
+        R$ 0,00
+      </p>
+    </div>
+    
+    <div class="flex items-center py-4">
+      <div class="flex flex-col ml-9 text-gray-dark">
+        <div class="flex items-center gap-3 my-1 text-sm">
+          <p class="font-bold">Nome cliente</p>
+        </div>
+        <div class="flex items-center gap-3 my-1 text-sm">
+          <p class="font-bold">Título</p>
+          <p>Exemplo Título</p>
+        </div>
+        <div class="flex items-center gap-3 my-1 text-sm">
+          <p class="font-bold">Venc.</p>
+          <p>Sem limite</p>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <span class="font-bold">Status</span>
+          <div class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Paga
+          </div>
+          <span class="">00/00/000</span>
+        </div>
+        <div class="flex items-center gap-3 my-1 text-sm">
+          <p class="font-bold">Cód.</p>
+          <p>0000000000</p>
+        </div>
+      </div>
+    </div>
+
+    <span class="block w-full border border-dashed border-divider"></span>
+
+    <div class="text-gray-dark">
+      <div class="grid grid-cols-2 pt-2 overflow-hidden text-sm border-b border-divider">
+        <p>Transação</p>
+        <p>0000000-00000000000000000000</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Data Transação</p>
+        <p>00/00/0000</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>NSU</p>
+        <p>000000000</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Tipo Cartão</p>
+        <p>Crédito - Master</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Portador Cartão</p>
+        <p>Nome do portador</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Nº Cartão</p>
+        <p>0000 **** **** 0000</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Parcelas</p>
+        <p>0x</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Situação Atual</p>
+        <p>Pagamento autorizado</p>
+      </div>
+      <div class="grid grid-cols-2 pt-2 text-sm border-b border-divider">
+        <p>Detalhes</p>
+        <p class="flex flex-col">
+          <span class="font-bold">00/00/0000 00:00:00</span>
+          Transação Autorizada
+        </p>
+      </div>
+    </div>
+
+    <span class="block w-full my-8 border border-dashed border-divider"></span>
+
+    <p class="font-bold text-gray-dark">Valores</p>
+
+    <div class="text-gray-dark">
+      <div class="flex justify-between pt-2 pr-2 mb-1 text-sm border-b border-divider">
+        <p>Valor Original</p>
+        <p>R$ 0,00</p>
+      </div>
+      <div class="flex justify-between pt-2 pr-2 mb-1 text-sm border-b border-divider">
+        <p>Multa</p>
+        <p>R$ 0,00</p>
+      </div>
+      <div class="flex justify-between pt-2 pr-2 mb-1 text-sm border-b border-divider">
+        <p>Juros</p>
+        <p>R$ 0,00</p>
+      </div>
+      <div class="flex justify-between pt-2 pr-2 mb-1 text-sm border-b border-divider">
+        <p>Valor Total</p>
+        <p>R$ 0,00</p>
+      </div>
+      <div class="flex justify-between pt-2 pr-2 mb-1 text-sm border-b border-divider">
+        <p>Valor Pago</p>
+        <p>R$ 0,00</p>
+      </div>
+    </div>
+
+    <a href="" class="block w-full mt-8 text-center underline text-primary">
+      Visualizar Link
+    </a>
+
+    <p class="mt-8 text-xs font-bold text-center text-gray-dark">
+      *Não encontrou o que estava procurando?
+    </p>
+    <p class="text-xs text-center text-gray-dark">
+      Acesse www.orendapay.com.br  e tenha o detalhamento completo desta cobrança.
+    </p>
+
+  </main>
+
+  <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+        <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="../charge/paymentMethods.html" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
