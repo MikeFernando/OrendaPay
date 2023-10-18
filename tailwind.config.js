@@ -13,7 +13,9 @@ module.exports = {
         placeholder: '#9BA0AC',
         main: '#F5F5F5',
         gray: '#9BA0AC',
-        green: '#28A745'
+        'gray-dark': '#7F868D',
+        green: '#28A745',
+        blue: '#17A2B8'
       }
     },
   },
