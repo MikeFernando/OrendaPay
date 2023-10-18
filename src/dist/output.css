@@ -829,6 +829,14 @@ html {
   margin-top: 2rem;
 }
 
+.mr-7{
+  margin-right: 1.75rem;
+}
+
+.mr-8{
+  margin-right: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -1208,6 +1216,11 @@ html {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .bg-\[\#09F\]{
   --tw-bg-opacity: 1;
   background-color: rgb(0 153 255 / var(--tw-bg-opacity));
@@ -1501,6 +1514,10 @@ html {
   font-weight: 400;
 }
 
+.uppercase{
+  text-transform: uppercase;
+}
+
 .text-\[\#7F868D\]{
   --tw-text-opacity: 1;
   color: rgb(127 134 141 / var(--tw-text-opacity));
@@ -1554,6 +1571,11 @@ html {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline{
