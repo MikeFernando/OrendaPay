@@ -11,11 +11,13 @@ module.exports = {
         secondary: '#333132',
         divider: '#CED4DA',
         placeholder: '#9BA0AC',
+        'bg-user': '#D9D9D9',
         main: '#F5F5F5',
         gray: '#9BA0AC',
         'gray-dark': '#7F868D',
         green: '#28A745',
-        blue: '#17A2B8'
+        blue: '#17A2B8',
+        'red-orenda': '#D61212'
       }
     },
   },
