@@ -690,14 +690,9 @@ html {
   margin-bottom: 2rem;
 }
 
-.mx-6{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.my-6{
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.mx-14{
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
 }
 
 .-mb-4{
@@ -800,6 +795,10 @@ html {
   margin-right: 10px;
 }
 
+.mr-auto{
+  margin-right: auto;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -848,20 +847,12 @@ html {
   margin-top: 2rem;
 }
 
-.mt-auto{
-  margin-top: auto;
+.mt-40{
+  margin-top: 10rem;
 }
 
-.mb-auto{
-  margin-bottom: auto;
-}
-
-.mr-6{
-  margin-right: 1.5rem;
-}
-
-.mr-auto{
-  margin-right: auto;
+.mt-28{
+  margin-top: 7rem;
 }
 
 .block{
@@ -932,12 +923,24 @@ html {
   height: 184px;
 }
 
+.h-\[300px\]{
+  height: 300px;
+}
+
 .h-\[42px\]{
   height: 42px;
 }
 
 .h-full{
   height: 100%;
+}
+
+.h-\[290px\]{
+  height: 290px;
+}
+
+.h-\[280px\]{
+  height: 280px;
 }
 
 .min-h-screen{
@@ -966,6 +969,10 @@ html {
 
 .w-24{
   width: 6rem;
+}
+
+.w-28{
+  width: 7rem;
 }
 
 .w-4{
@@ -1018,10 +1025,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-28{
-  width: 7rem;
 }
 
 .min-w-\[253px\]{
@@ -1204,6 +1207,10 @@ html {
   border-width: 1px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-b{
   border-bottom-width: 1px;
 }
@@ -1284,6 +1291,10 @@ html {
   background-color: rgb(249 249 249 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ffffff21\]{
+  background-color: #ffffff21;
+}
+
 .bg-bg-user{
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
@@ -1326,11 +1337,6 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -1453,11 +1459,6 @@ html {
   padding-bottom: 1.25rem;
 }
 
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -1492,6 +1493,10 @@ html {
 
 .pl-3{
   padding-left: 0.75rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
 }
 
 .pr-11{
@@ -1534,6 +1539,10 @@ html {
   padding-top: 1rem;
 }
 
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .pt-7{
   padding-top: 1.75rem;
 }
@@ -1544,30 +1553,6 @@ html {
 
 .pt-\[72px\]{
   padding-top: 72px;
-}
-
-.pb-4{
-  padding-bottom: 1rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
-}
-
-.pb-1{
-  padding-bottom: 0.25rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
-}
-
-.pt-5{
-  padding-top: 1.25rem;
 }
 
 .text-left{
@@ -1584,6 +1569,11 @@ html {
 
 .font-sans{
   font-family: DM Sans, Poppins;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-base{
@@ -1609,11 +1599,6 @@ html {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold{
@@ -1686,6 +1671,11 @@ html {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-red-orenda{
+  --tw-text-opacity: 1;
+  color: rgb(214 18 18 / var(--tw-text-opacity));
+}
+
 .text-secondary{
   --tw-text-opacity: 1;
   color: rgb(51 49 50 / var(--tw-text-opacity));
@@ -1694,11 +1684,6 @@ html {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-red-orenda{
-  --tw-text-opacity: 1;
-  color: rgb(214 18 18 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1740,16 +1725,6 @@ html {
   font-family: 'Poppins';
 }
 
-.placeholder\:text-sm::-moz-placeholder{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.placeholder\:text-sm::placeholder{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .placeholder\:text-lg::-moz-placeholder{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1760,14 +1735,14 @@ html {
   line-height: 1.75rem;
 }
 
-.placeholder\:text-xs::-moz-placeholder{
-  font-size: 0.75rem;
-  line-height: 1rem;
+.placeholder\:text-sm::-moz-placeholder{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
-.placeholder\:text-xs::placeholder{
-  font-size: 0.75rem;
-  line-height: 1rem;
+.placeholder\:text-sm::placeholder{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .placeholder\:font-bold::-moz-placeholder{
@@ -1776,6 +1751,16 @@ html {
 
 .placeholder\:font-bold::placeholder{
   font-weight: 700;
+}
+
+.placeholder\:text-divider::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(206 212 218 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-divider::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(206 212 218 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-gray::-moz-placeholder{
@@ -1806,16 +1791,6 @@ html {
 .placeholder\:text-secondary::placeholder{
   --tw-text-opacity: 1;
   color: rgb(51 49 50 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-divider::-moz-placeholder{
-  --tw-text-opacity: 1;
-  color: rgb(206 212 218 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-divider::placeholder{
-  --tw-text-opacity: 1;
-  color: rgb(206 212 218 / var(--tw-text-opacity));
 }
 
 .after\:absolute::after{
