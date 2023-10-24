@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/output.css">
+  <title>Pix</title>
+</head>
+
+<body class="bg-main">
+  <div class="pb-3 bg-secondary">
+    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+      <a href="../home">
+        <img src="../assets/svg/arrow-back.svg" alt="voltar">
+      </a>
+      <p class="font-sans text-base font-bold text-white ">
+        Pix
+      </p>
+      <div />
+    </header>
+
+    <div class="flex items-center justify-between px-5 py-3 mx-5 border rounded-2xl border-primary">
+      <div>
+        <p class="text-base font-bold text-white">R$ 0,00</p>
+        <span class="text-sm text-divider font-['Poppins']">
+          Saldo atual
+        </span>
+      </div>
+
+      <span class="text-sm font-semibold underline text-primary">ocultar</span>
+    </div>
+
+    <p class="px-5 mt-3 text-divider font-['Poppins']">
+      Envie e receba pagamentos a qualquer hora e  dia da semana. 
+    </p>
+  </div>
+
+  <main class="min-h-screen px-5 bg-secondary">
+    <p class="py-5 text-base font-bold text-white">Enviar</p>
+
+    <div class="flex gap-3">
+      <a href="#" class="flex flex-col items-center">
+        <div class="px-10 py-4 bg-white rounded-md">
+          <img src="../assets/pix/uil_money-insert.svg" alt="Enviar">
+        </div>
+        <p class="mt-1 text-xs font-medium text-white">Enviar</p>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <div class="px-10 py-4 bg-white rounded-md">
+          <img src="../assets/pix/ri_qr-scan-2-line.svg" alt="Ler QR Code">
+        </div>
+        <p class="mt-1 text-xs font-medium text-white">Ler QR Code</p>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <div class="px-10 py-4 bg-white rounded-md">
+          <img src="../assets/pix/uil_copy-alt.svg" alt="Copia e cola">
+        </div>
+        <p class="mt-1 text-xs font-medium text-white">Copia e cola</p>
+      </a>
+    </div>
+
+    <p class="my-5 text-base font-bold text-white">Receber</p>
+
+    <div class="flex gap-3">
+      <a href="./receive-pix.html" class="flex flex-col items-center">
+        <div class="px-10 py-4 bg-white rounded-md">
+          <img src="../assets/pix/uil_qrcode-scan.svg" alt="QR Code">
+        </div>
+        <p class="mt-1 text-xs font-medium text-white">Receber Pix</p>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <div class="px-10 py-4 bg-white rounded-md">
+          <img src="../assets/pix/uil_money-insert.svg" alt="Cobrar ">
+        </div>
+        <p class="mt-1 text-xs font-medium text-white">Cobrar</p>
+      </a>
+    </div>
+  </main>
+
+  <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
+    <ul class="flex gap-3">
+      <li>
+        <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+          <span class="text-xs">Início</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="../charge/paymentMethods.html" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+          <span class="text-xs">Cobrança</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+          <span class="text-xs">Extrato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+          <span class="text-xs">Perfil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
