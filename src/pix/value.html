@@ -21,28 +21,24 @@
     </header>
   </div>
 
-  <main class="px-5 pb-20 mt-3 -translate-y-6 bg-white rounded-t-2xl">
+  <main class="h-full px-5 pb-20 mt-3 -translate-y-6 bg-white rounded-t-2xl">
     <div class="flex flex-col items-center justify-center pt-16">
-      <p class="text-base font-bold text-center text-secondary">
-        Cole o código do Pix que <br> quer pagar
-      </p>
-      <p class="break-words text-divider max-w-[260px] mt-4 text-center">
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      </p>
-
       <input 
-        type="text" 
-        class="w-full px-8 bg-transparent border-b outline-none border-primary"
+        type="number"
+        placeholder="R$"
+        class="w-full text-center bg-transparent outline-none text-secondary placeholder:text-lg placeholder:font-bold placeholder:text-divider"
       />
 
-      <!-- <span class="mt-2 text-xs text-center text-red-orenda">
-        Verifique se os dados estão corretos e tente novamente.
-      </span> -->
+      <span class="block w-[75%] mx-auto my-3 border-b border-primary"></span>
 
-      <a href="./value.html" class="flex items-center justify-center mt-8 btn">
-        Fazer pix para este E-mail
-      </a>
+      <span class="mb-16 text-xs text-gray">
+        (Mínimo R$0,00 - Máximo R$0,00)
+      </span>
     </div>
+
+    <a href="./revision.html" class="flex items-center justify-center mt-8 btn">
+      Continuar para revisão
+    </a>
   </main>
 
   <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">

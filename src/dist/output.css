@@ -838,6 +838,14 @@ html {
   margin-top: 2rem;
 }
 
+.mt-auto{
+  margin-top: auto;
+}
+
+.mb-auto{
+  margin-bottom: auto;
+}
+
 .block{
   display: block;
 }
@@ -908,6 +916,10 @@ html {
 
 .h-\[42px\]{
   height: 42px;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .min-h-screen{
@@ -1414,6 +1426,11 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .pb-16{
   padding-bottom: 4rem;
 }
@@ -1677,6 +1694,24 @@ html {
   line-height: 1.25rem;
 }
 
+.placeholder\:text-lg::-moz-placeholder{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.placeholder\:text-lg::placeholder{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.placeholder\:font-bold::-moz-placeholder{
+  font-weight: 700;
+}
+
+.placeholder\:font-bold::placeholder{
+  font-weight: 700;
+}
+
 .placeholder\:text-gray::-moz-placeholder{
   --tw-text-opacity: 1;
   color: rgb(155 160 172 / var(--tw-text-opacity));
@@ -1705,6 +1740,16 @@ html {
 .placeholder\:text-secondary::placeholder{
   --tw-text-opacity: 1;
   color: rgb(51 49 50 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-divider::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(206 212 218 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-divider::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(206 212 218 / var(--tw-text-opacity));
 }
 
 .after\:absolute::after{
