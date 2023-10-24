@@ -690,6 +690,16 @@ html {
   margin-bottom: 2rem;
 }
 
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .-mb-4{
   margin-bottom: -1rem;
 }
@@ -846,6 +856,14 @@ html {
   margin-bottom: auto;
 }
 
+.mr-6{
+  margin-right: 1.5rem;
+}
+
+.mr-auto{
+  margin-right: auto;
+}
+
 .block{
   display: block;
 }
@@ -1000,6 +1018,10 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-28{
+  width: 7rem;
 }
 
 .min-w-\[253px\]{
@@ -1306,6 +1328,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1519,6 +1546,30 @@ html {
   padding-top: 72px;
 }
 
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1558,6 +1609,11 @@ html {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold{
@@ -1702,6 +1758,16 @@ html {
 .placeholder\:text-lg::placeholder{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.placeholder\:text-xs::-moz-placeholder{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.placeholder\:text-xs::placeholder{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .placeholder\:font-bold::-moz-placeholder{
