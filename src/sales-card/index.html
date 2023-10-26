@@ -23,16 +23,44 @@
     </header>
 
     <div class="flex items-center justify-between pl-10 pr-7">
-      <div class="py-5 text-sm font-medium text-center text-white border-gray-200 dark:text-white">
-        <ul class="flex flex-wrap -mb-px">
-            <li class="mr-2">
-                <a href="#" class="inline-block border-b-2 rounded-t-lg text-primary border-pritext-primary active dark:text-primary dark:border-primary" aria-current="page">Todas</a>
+      <!-- TABS HEADER -->
+      <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+            <li role="presentation">
+                <button 
+                  id="all-tab" 
+                  data-tabs-target="#all" 
+                  type="button" 
+                  role="tab" 
+                  aria-controls="all" 
+                  class="inline-block pr-2 font-bold border-b rounded-t-lg aria-selected:border-primary aria-selected:text-primary text-divider" 
+                >
+                  Todas
+                </button>
             </li>
-            <li class="mr-2">
-                <a href="#" class="inline-block border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Maquininha</a>
+            <li role="presentation">
+                <button 
+                  id="machine-tab" 
+                  data-tabs-target="#machine" 
+                  type="button" 
+                  role="tab" 
+                  aria-controls="machine" 
+                  class="inline-block pr-2 font-bold border-b rounded-t-lg aria-selected:border-primary aria-selected:text-primary text-divider"
+                >
+                  Maquininha
+                </button>
             </li>
-            <li class="mr-2">
-                <a href="#" class="inline-block border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Links</a>
+            <li role="presentation">
+                <button 
+                  id="link-tab" 
+                  data-tabs-target="#link" 
+                  type="button" 
+                  role="tab" 
+                  aria-controls="link" 
+                  class="inline-block pr-2 font-bold border-b rounded-t-lg aria-selected:border-primary aria-selected:text-primary text-divider" 
+                >
+                  Links
+                </button>
             </li>
         </ul>
       </div>
@@ -109,95 +137,283 @@
       </ul>
     </div>
 
+     <!-- TABS CONTENT -->
+    <div id="default-tab-content">
+      <!-- ALL -->
+      <section  class="hidden rounded-lg bg-main" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
     
-    <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
-      <div class="mr-5">
-        <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
-      </div>
-      
-      <div class="flex flex-col w-full">
-        <div class="flex items-center flex-1 gap-2">
-          <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
-          <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
         </div>
-        <div class="text-xs text-gray-dark">
-          <p class="font-bold">Crédito <span>10x</span></p>
-          <p>**** **** **** 0000</p>
-          <p class="uppercase">NOME NO CARTÃO</p>
-        </div>
-      </div>
 
-      <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
-        Aprovada
-      </a>
-    </div>
-
-    <div class="flex items-center px-5 py-4 bg-white">
-      <div class="mr-5">
-        <img class="w-6 h-6" src="../assets/svg/octicon_link-16.svg">
-      </div>
-      
-      <div class="flex flex-col w-full">
-        <div class="flex items-center flex-1 gap-2">
-          <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
-          <span class="text-xl font-bold text-secondary">R$ 0,00</span>
-        </div>
-        <div class="text-xs text-gray-dark">
-          <p class="font-bold">Crédito <span>10x</span></p>
-          <p>**** **** **** 0000</p>
-          <p class="uppercase">NOME NO CARTÃO</p>
-        </div>
-      </div>
-
-      <a href="./receipt.html" class="px-5 py-1 text-xs text-red-500 bg-white border border-red-500 rounded-full">
-        Negada
-      </a>
-    </div>
-
-    <div class="flex items-center px-5 py-4 bg-white">
-      <div class="mr-8"></div>
-      
-      <div class="flex flex-col w-full">
-        <div class="flex items-center flex-1 gap-2">
-          <img class="w-4 h-4" src="../assets/svg/logo-pix-png-icone-520x520 1.svg">
-          <span class="text-xl font-bold text-secondary">R$ 0,00</span>
-        </div>
-        <div class="text-xs text-gray-dark">
-          <p class="font-bold">PIX</p>
-          <p>Chave pix</p>
-          <p class="uppercase">NOME DO PAGADOR</p>
-        </div>
-      </div>
-
-      <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
-        Aprovada
-      </a>
-    </div>
-
-    <p class="px-5 mb-3 text-xs text-secondary">Segunda-feira - 14 de Agosto</p>
-
-    <div class="flex items-center px-5 py-4 bg-white">
-      <div class="mr-5">
-        <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
-      </div>
-      
-      <div class="flex flex-col w-full">
-        <div class="flex items-center flex-1 gap-2">
-          <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
-          <span class="text-xl font-bold text-secondary">R$ 0,00</span>
-        </div>
-        <div class="text-xs text-gray-dark">
-          <p class="font-bold">Crédito <span>10x</span></p>
-          <p>**** **** **** 0000</p>
-          <p class="uppercase">NOME NO CARTÃO</p>
-        </div>
-      </div>
-
-      <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
-        Aprovada
-      </a>
-    </div>
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
     
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/octicon_link-16.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-5 py-1 text-xs text-red-500 bg-white border border-red-500 rounded-full">
+            Negada
+          </a>
+        </div>
+
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-8"></div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-4 h-4" src="../assets/svg/logo-pix-png-icone-520x520 1.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">PIX</p>
+              <p>Chave pix</p>
+              <p class="uppercase">NOME DO PAGADOR</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+    
+        <p class="px-5 my-3 text-xs text-secondary">Segunda-feira - 14 de Agosto</p>
+    
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+      </section>
+      <!-- MACHINE -->
+      <section class="hidden rounded-lg bg-main"  id="machine" role="tabpanel" aria-labelledby="machine-tab">
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+
+        <div class="flex items-center px-5 py-4 bg-white border-b border-dashed border-divider">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+        
+        <p class="px-5 my-3 text-xs text-secondary">Segunda-feira - 14 de Agosto</p>
+    
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/fontisto_shopping-pos-machine.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-4 py-1 text-xs bg-white border rounded-full text-green border-green">
+            Aprovada
+          </a>
+        </div>
+      </section>
+      <!-- LINKS -->
+      <section class="hidden p-4 rounded-lg bg-main" id="link" role="tabpanel" aria-labelledby="link-tab">
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/octicon_link-16.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-5 py-1 text-xs text-red-500 bg-white border border-red-500 rounded-full">
+            Negada
+          </a>
+        </div>
+
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/octicon_link-16.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-5 py-1 text-xs text-red-500 bg-white border border-red-500 rounded-full">
+            Negada
+          </a>
+        </div>
+
+        <p class="px-5 my-3 text-xs text-secondary">Segunda-feira - 14 de Agosto</p>
+
+        <div class="flex items-center px-5 py-4 bg-white">
+          <div class="mr-5">
+            <img class="w-6 h-6" src="../assets/svg/octicon_link-16.svg">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <div class="flex items-center flex-1 gap-2">
+              <img class="w-6 h-6" src="../assets/bandeiras/Mastercard.svg">
+              <span class="text-xl font-bold text-secondary">R$ 0,00</span>
+            </div>
+            <div class="text-xs text-gray-dark">
+              <p class="font-bold">Crédito <span>10x</span></p>
+              <p>**** **** **** 0000</p>
+              <p class="uppercase">NOME NO CARTÃO</p>
+            </div>
+          </div>
+    
+          <a href="./receipt.html" class="px-5 py-1 text-xs bg-white border rounded-full text-green border-green">
+            aprovada
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
