@@ -129,29 +129,31 @@
         Simulador de taxas
       </a>
 
-      <div class="flex items-center justify-between mt-8">
+      <div class="flex items-center justify-between pr-5 mt-8">
         <div>
-          <label class="flex items-center gap-1 mb-2 text-xs text-black" for="split">
+          <div class="flex items-center gap-1 mb-2 text-xs text-black">
             <img src="../assets/svg/vaadin_connect.svg" alt="">
             Split de recebimento?
-          </label>
-          <div class="relative flex w-24 h-10 mb-6 bg-transparent border rounded-md border-divider">
-            <div class="flex items-center justify-center border rounded-l-sm border-green bg-green" style="width: 20%">
-              <span class="absolute left-10 text-divider">Não</span>
-            </div>
           </div>
+          <label class="relative inline-flex items-center w-24 border rounded border-divider">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+            </div>
+            <p class="absolute left-7 text-divider peer">Não</p>
+          </label>
         </div>
 
         <div>
-          <label class="flex items-center gap-1 mb-2 text-xs text-black" for="split">
+          <div class="flex items-center gap-1 mb-2 text-xs text-black">
             <img src="../assets/svg/vaadin_connect.svg" alt="">
             Recorrente
-          </label>
-          <div class="relative flex w-24 h-10 mb-6 bg-transparent border rounded-md border-divider">
-            <div class="flex items-center justify-center rounded-l-sm bg-green" style="width: 20%">
-              <span class="absolute left-10 text-divider">Não</span>
-            </div>
           </div>
+          <label class="relative inline-flex items-center w-24 border rounded border-divider">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+            </div>
+            <p class="absolute left-7 text-divider peer">Não</p>
+          </label>
         </div>
       </div>
 

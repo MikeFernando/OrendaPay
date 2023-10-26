@@ -607,6 +607,18 @@ html {
   line-height: 1.5rem;
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .fixed{
   position: fixed;
 }
@@ -629,6 +641,14 @@ html {
 
 .left-6{
   left: 1.5rem;
+}
+
+.left-8{
+  left: 2rem;
+}
+
+.left-7{
+  left: 1.75rem;
 }
 
 .z-10{
@@ -807,6 +827,10 @@ html {
   margin-top: 2.5rem;
 }
 
+.mt-11{
+  margin-top: 2.75rem;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -851,10 +875,6 @@ html {
   margin-top: 2rem;
 }
 
-.mt-11{
-  margin-top: 2.75rem;
-}
-
 .block{
   display: block;
 }
@@ -865,6 +885,10 @@ html {
 
 .flex{
   display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
 }
 
 .grid{
@@ -987,6 +1011,10 @@ html {
   width: 16rem;
 }
 
+.w-8{
+  width: 2rem;
+}
+
 .w-\[10\%\]{
   width: 10%;
 }
@@ -1017,6 +1045,10 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-20{
+  width: 5rem;
 }
 
 .min-w-\[253px\]{
@@ -1093,6 +1125,10 @@ html {
   justify-content: space-between;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
 .gap-1{
   gap: 0.25rem;
 }
@@ -1115,6 +1151,10 @@ html {
 
 .gap-5{
   gap: 1.25rem;
+}
+
+.gap-10{
+  gap: 2.5rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
@@ -1542,6 +1582,10 @@ html {
   padding-top: 72px;
 }
 
+.pr-5{
+  padding-right: 1.25rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1785,9 +1829,19 @@ html {
   position: absolute;
 }
 
+.after\:left-0::after{
+  content: var(--tw-content);
+  left: 0px;
+}
+
 .after\:top-1::after{
   content: var(--tw-content);
   top: 0.25rem;
+}
+
+.after\:-left-5::after{
+  content: var(--tw-content);
+  left: -1.25rem;
 }
 
 .after\:ml-2::after{
@@ -1795,9 +1849,19 @@ html {
   margin-left: 0.5rem;
 }
 
+.after\:h-10::after{
+  content: var(--tw-content);
+  height: 2.5rem;
+}
+
 .after\:h-3::after{
   content: var(--tw-content);
   height: 0.75rem;
+}
+
+.after\:w-14::after{
+  content: var(--tw-content);
+  width: 3.5rem;
 }
 
 .after\:w-3::after{
@@ -1805,9 +1869,56 @@ html {
   width: 0.75rem;
 }
 
+.after\:w-5::after{
+  content: var(--tw-content);
+  width: 1.25rem;
+}
+
+.after\:w-12::after{
+  content: var(--tw-content);
+  width: 3rem;
+}
+
+.after\:w-11::after{
+  content: var(--tw-content);
+  width: 2.75rem;
+}
+
+.after\:w-10::after{
+  content: var(--tw-content);
+  width: 2.5rem;
+}
+
+.after\:w-16::after{
+  content: var(--tw-content);
+  width: 4rem;
+}
+
+.after\:w-20::after{
+  content: var(--tw-content);
+  width: 5rem;
+}
+
 .after\:rounded-full::after{
   content: var(--tw-content);
   border-radius: 9999px;
+}
+
+.after\:rounded::after{
+  content: var(--tw-content);
+  border-radius: 0.25rem;
+}
+
+.after\:rounded-r-full::after{
+  content: var(--tw-content);
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.after\:rounded-r::after{
+  content: var(--tw-content);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .after\:bg-green::after{
@@ -1822,6 +1933,18 @@ html {
   background-color: rgb(245 131 31 / var(--tw-bg-opacity));
 }
 
+.after\:transition-all::after{
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:content-\[\'\'\]::after{
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
 .checked\:bg-primary:checked{
   --tw-bg-opacity: 1;
   background-color: rgb(245 131 31 / var(--tw-bg-opacity));
@@ -1832,6 +1955,18 @@ html {
   color: rgb(245 131 31 / var(--tw-text-opacity));
 }
 
+.checked\:after\:rounded-r:checked::after{
+  content: var(--tw-content);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.checked\:after\:rounded-r-full:checked::after{
+  content: var(--tw-content);
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(245 131 31 / var(--tw-border-opacity));
@@ -1840,6 +1975,49 @@ html {
 .focus\:ring-primary:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(245 131 31 / var(--tw-ring-opacity));
+}
+
+.peer:checked ~ .peer-checked\:after\:w-20::after{
+  content: var(--tw-content);
+  width: 5rem;
+}
+
+.peer:checked ~ .peer-checked\:after\:w-11::after{
+  content: var(--tw-content);
+  width: 2.75rem;
+}
+
+.peer:checked ~ .peer-checked\:after\:w-14::after{
+  content: var(--tw-content);
+  width: 3.5rem;
+}
+
+.peer:checked ~ .peer-checked\:after\:w-16::after{
+  content: var(--tw-content);
+  width: 4rem;
+}
+
+.peer:checked ~ .peer-checked\:after\:translate-x-8::after{
+  content: var(--tw-content);
+  --tw-translate-x: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.peer:checked ~ .peer-checked\:after\:translate-x-4::after{
+  content: var(--tw-content);
+  --tw-translate-x: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.peer:checked ~ .peer-checked\:after\:border-green::after{
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(40 167 69 / var(--tw-border-opacity));
+}
+
+.peer:focus ~ .peer-focus\:outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 @media (prefers-color-scheme: dark){
