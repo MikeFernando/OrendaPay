@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/output.css">
   <title>Login</title>
 </head>
+
 <body>
-    <header class="bg-secondary flex justify-between items-center h-[184px] rounded-b-[44px] pl-3 pr-11">
-      <a href="../index.html">
-        <img src="../assets/svg/arrow-back.svg" alt="voltar">
-      </a>
-      <p class="font-sans text-base font-bold text-white">
-        Faça login na sua conta
-      </p>
-      <div />
-    </header>
+  <header class="bg-secondary flex justify-between items-center h-[184px] rounded-b-[44px] pl-3 pr-11">
+    <a href="../index.html">
+      <img src="../assets/svg/arrow-back.svg" alt="voltar">
+    </a>
+    <p class="font-sans text-base font-bold text-white">
+      Faça login na sua conta
+    </p>
+    <div />
+  </header>
 
-    <div class="py-3 px-12 flex mx-auto bg-[#F9F9F9] w-[228px] h-24 rounded-2xl -translate-y-14 shadow-md">
-      <img src="../assets/logo.png" alt="Logo Orenda pay">
-    </div>
+  <div class="py-3 px-12 flex mx-auto bg-[#F9F9F9] w-[228px] h-24 rounded-2xl -translate-y-14 shadow-md">
+    <img src="../assets/logo.png" alt="Logo Orenda pay">
+  </div>
 
-    <main class="px-5 pb-28">
-      <form action="">
-        <label for="email" class="block font-['Poppins'] font-bold text-secondary">
-          E-mail
-        </label>
-        <div class="flex gap-2 border rounded border-divider">
-          <img class="pl-2" src="../assets/svg/email.svg" alt="email" />
-          <input
-            class="px-3 py-2 outline-none" 
-            type="email" 
-            placeholder="exemplo@gmail.com"
-          >
-        </div>
-  
-        <label for="password" class="block font-['Poppins'] mt-3 font-bold text-secondary">
-          Senha
-        </label>
-        <div class="flex gap-2 border rounded border-divider">
-          <img class="pl-2" src="../assets/svg/lock.svg" alt="email" />
-          <input
-            class="px-3 py-2 outline-none placeholder:translate-y-1" 
-            type="password" 
-            placeholder="*******"
-          >
-        </div>
+  <main class="px-5 pb-28">
+    <form action="">
+      <label for="email" class="block font-['Poppins'] font-bold text-secondary">
+        E-mail
+      </label>
+      <div class="flex gap-2 border rounded border-divider">
+        <img class="pl-2" src="../assets/svg/email.svg" alt="email" />
+        <input 
+          type="email" 
+          placeholder="exemplo@gmail.com"
+          class="py-2 pr-3 overflow-hidden outline-none" 
+        >
+      </div>
 
-        <div class="flex flex-col items-center justify-center">
-          <a href="../home" class="w-full mt-8 mb-5 text-center btn">
-            Acessar
-          </a>
-          
-          <a href="../signUp/validation.html" class="text-base underline text-secondary">
-            Esqueceu a senha?
-          </a>
+      <label for="password" class="block font-['Poppins'] mt-3 font-bold text-secondary">
+        Senha
+      </label>
+      <div class="flex gap-2 border rounded border-divider">
+        <img class="pl-2" src="../assets/svg/lock.svg" alt="email" />
+        <input 
+          type="password" 
+          placeholder="*******"
+          class="py-2 pr-3 overflow-hidden outline-none placeholder:translate-y-1" 
+        >
+      </div>
 
-          <img class="mt-4" src="../assets/divider.png">
+      <div class="flex flex-col items-center justify-center">
+        <a href="../home" class="w-full mt-8 mb-5 text-center btn">
+          Acessar
+        </a>
 
-          <a href="../signUp" class="w-full mt-8 text-center btn-outline">
-            Cadastre-se
-          </a>
-        </div>
-      </form>
-    </main>
+        <a href="../signUp/validation.html" class="text-base underline text-secondary">
+          Esqueceu a senha?
+        </a>
+
+        <img class="mt-4" src="../assets/divider.png">
+
+        <a href="../signUp" class="w-full mt-8 text-center btn-outline">
+          Cadastre-se
+        </a>
+      </div>
+    </form>
+  </main>
 </body>
+
 </html>

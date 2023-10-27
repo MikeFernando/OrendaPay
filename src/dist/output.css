@@ -1579,6 +1579,10 @@ html {
   padding-left: 0.5rem !important;
 }
 
+.pr-3{
+  padding-right: 0.75rem !important;
+}
+
 .text-left{
   text-align: left !important;
 }
