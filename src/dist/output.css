@@ -1244,6 +1244,10 @@ html {
   border-style: dashed !important;
 }
 
+.border-none{
+  border-style: none !important;
+}
+
 .border-blue{
   --tw-border-opacity: 1 !important;
   border-color: rgb(23 162 184 / var(--tw-border-opacity)) !important;
@@ -1569,6 +1573,10 @@ html {
 
 .pt-\[72px\]{
   padding-top: 72px !important;
+}
+
+.pl-2{
+  padding-left: 0.5rem !important;
 }
 
 .text-left{
