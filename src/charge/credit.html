@@ -79,71 +79,53 @@
 
       <!-- Payment Methods  -->
       <a href="./boleto.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-        <div>
-          <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
-        </div>
-        <button>
-          Boleto
-        </button>
+        <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
+        Boleto
       </a>
 
       <a href="../pix/index.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-        <div>
-          <img src="../assets/transfer-icons/pix.svg" alt="pix">
-        </div>
-        <button>
-          Pix
-        </button>
+        <img src="../assets/transfer-icons/pix.svg" alt="pix">
+        Pix
       </a>
 
       <a href="#" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-        <div>
-          <img src="../assets/transfer-icons/debit.svg" alt="Débito">
-        </div>
-        <button>
-          Débito
-        </button>
+        <img src="../assets/transfer-icons/debit.svg" alt="Débito">
+        Débito
       </a>
       
-      <a href="../charge/credit.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-        <div>
-          <img src="../assets/transfer-icons/credit.svg" alt="Crédito">
-        </div>
-        <button>
-          Crédito
-        </button>
+      <a href="../charge/credit.html" class="flex items-center justify-center gap-1 my-3 text-center text-white btn-outline bg-primary">
+        <img src="../assets/transfer-icons/credit-white.svg" alt="Crédito">
+        Crédito
       </a>
 
-      <a cl href=""ass="flex items-center justify-between pr-5 mt-8">
-        <div>
-          <div class="flex items-center gap-1 mb-2 text-xs text-black">
-            <img src="../assets/svg/vaadin_connect.svg" alt="">
-            Split de recebimento?
-          </div>
-          <label class="relative inline-flex items-center w-24 border rounded border-divider">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
-            </div>
-            <p class="absolute left-7 text-divider peer">Não</p>
-          </label>
+      <div>
+        <div class="flex items-center gap-1 mb-2 text-xs text-black">
+          <img src="../assets/svg/vaadin_connect.svg" alt="">
+          Split de recebimento?
         </div>
+        <label class="relative inline-flex items-center w-24 border rounded border-divider">
+          <input type="checkbox" value="" class="sr-only peer">
+          <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+          </div>
+          <p class="absolute left-7 text-divider peer">Não</p>
+        </label>
+      </div>
 
-        <div>
-          <div class="flex items-center gap-1 mb-2 text-xs text-black">
-            <img src="../assets/svg/vaadin_connect.svg" alt="">
-            Recorrente
-          </div>
-          <label class="relative inline-flex items-center w-24 border rounded border-divider">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
-            </div>
-            <p class="absolute left-7 text-divider peer">Não</p>
-          </label>
+      <div>
+        <div class="flex items-center gap-1 mb-2 text-xs text-black">
+          <img src="../assets/svg/vaadin_connect.svg" alt="">
+          Recorrente
         </div>
-      </a>
+        <label class="relative inline-flex items-center w-24 border rounded border-divider">
+          <input type="checkbox" value="" class="sr-only peer">
+          <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+          </div>
+          <p class="absolute left-7 text-divider peer">Não</p>
+        </label>
+      </div>
 
       <label for="countries" class="block mt-6 mb-2 text-sm font-medium text-secondary">Limite de parcelamento</label>
-      <select id="countries" class="bg-gray-50 outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5">
+      <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
         <option selected>À vista</option>
       </select>
 
@@ -153,7 +135,7 @@
       </div>
 
       <label for="countries" class="block mt-6 mb-2 text-sm font-medium text-secondary">Repassar juros/taxa a partir de qual parcela?</label>
-      <select id="countries" class="bg-gray-50 outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5">
+      <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
         <option selected>Nenhum</option>
       </select>
 
