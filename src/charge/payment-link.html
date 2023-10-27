@@ -24,48 +24,51 @@
   <main class="min-h-screen px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-main rounded-t-2xl">
     
     <form action="">
-      <label for="value" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
+      <!-- Title Charge -->
+      <label for="kit" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
         Título da cobrança
         <span><img src="../assets/svg/akar-icons_info-fill.svg" alt="info"></span>
       </label>
       <input
-        id="title-charge" 
+        id="kit" 
         placeholder="ex. kit de inverno"
-        class="mb-4 bg-white wrapper-input placeholder:text-gray" 
+        class="w-full px-3 py-2 mb-4 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-gray" 
       >
-  
+      <!-- Payment Value  -->
       <div class="flex flex-col mt-4 mb-8">
         <label for="value" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
           Valor do pagamento
           <span><img src="../assets/svg/akar-icons_info-fill.svg" alt="info"></span>
         </label>
-        <div class="flex border rounded border-divider">
-          <span class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-primary text-white">
+        <div class="flex">
+          <span class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-primary text-white  border rounded border-primary rounded-r-none">
             R$
           </span>
           <input 
-            class="w-full px-2 py-2 rounded-lg outline-none text-secondary" 
             type="number"
             placeholder="0,00"
+            class="w-full px-2 py-2 border border-l-0 rounded rounded-l-none outline-none focus:border-primary border-divider text-secondary" 
           >
         </div>
       </div>
 
+      <!-- Limit Date  -->
       <div class="flex flex-col">
         <label for="value" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
-          Data limite
-          <span><img src="../assets/svg/akar-icons_info-fill.svg" alt="info"></span>
+          Data limite  
         </label>
-        <div class="flex border rounded border-divider">
-          <img class="w-11 h-[42px]" src="../assets/svg/calendar-white.svg" alt="">
+        <div class="flex">
+          <span class="flex items-center justify-center w-12 h-[42px] text-sm font-bold bg-primary text-white  border rounded border-primary rounded-r-none">
+            <img class="w-12 h-[42px]" src="../assets/svg/calendar-white.svg" alt="">
+          </span>
           <input 
-            class="w-full px-2 py-2 text-sm rounded-lg outline-none text-gray" 
+            class="w-full px-2 py-2 text-sm border border-l-0 rounded rounded-l-none outline-none border-divider focus:border-primary text-gray" 
             type="date"
           >
         </div>
       </div>
 
-      <span class="block w-[75%] mx-auto my-8 border-b border-divider"></span>
+      <span class="block w-[85%] mx-auto my-8 border-b border-divider"></span>
 
       <div class="flex items-center">
         <span class="font-['Poppins'] text-sm text-gray mr-1">Selecione o meio de pagamento</span>
@@ -74,43 +77,44 @@
         </span>
       </div>
 
-      <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <!-- Payment Methods  -->
+      <a href="./boleto.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
         <div>
           <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
         </div>
-        <a href="./boleto.html" >
+        <button>
           Boleto
-        </a>
-      </div>
+        </button>
+      </a>
 
-      <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <a href="../pix/index.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
         <div>
           <img src="../assets/transfer-icons/pix.svg" alt="pix">
         </div>
-        <a href="#">
+        <button>
           Pix
-        </a>
-      </div>
+        </button>
+      </a>
 
-      <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <a href="#" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
         <div>
           <img src="../assets/transfer-icons/debit.svg" alt="Débito">
         </div>
-        <a href="#">
+        <button>
           Débito
-        </a>
-      </div>
+        </button>
+      </a>
       
-      <div class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+      <a href="../charge/credit.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
         <div>
           <img src="../assets/transfer-icons/credit.svg" alt="Crédito">
         </div>
-        <a href="#">
+        <button>
           Crédito
-        </a>
-      </div>
+        </button>
+      </a>
 
-      <div class="flex items-center justify-between pr-5 mt-8">
+      <a cl href=""ass="flex items-center justify-between pr-5 mt-8">
         <div>
           <div class="flex items-center gap-1 mb-2 text-xs text-black">
             <img src="../assets/svg/vaadin_connect.svg" alt="">
@@ -136,7 +140,7 @@
             <p class="absolute left-7 text-divider peer">Não</p>
           </label>
         </div>
-      </div>
+      </a>
 
       <a href="./generate-charge.html" class="flex items-center justify-center mt-8 btn">
         Gerar Link de Pagamento
