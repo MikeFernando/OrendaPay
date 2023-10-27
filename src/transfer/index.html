@@ -23,42 +23,37 @@
 
   <main class="px-5 pb-20 mt-3 -translate-y-6 bg-main rounded-t-2xl">
     <form class="py-4">
+      <!-- Banco -->
       <label for="bank" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
         <img src="../assets/transfer-icons/fa_bank.svg" alt="bank">
         Banco
       </label>
-      <div class="bg-white wrapper-input">
-        <input
-          class="bg-white outline-none placeholder:text-secondary focus:border-primary" 
-          type="bank" 
-          placeholder="Selecione um banco..."
-        >
-      </div>
-
+      <input
+        type="bank" 
+        placeholder="Selecione um banco..."
+        class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-placeholder"
+      >
+      <!-- Type account -->
       <label for="current-account" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
         <img src="../assets/transfer-icons/fa6-solid_money-check.svg" alt="bank">
         Tipo de conta
       </label>
-      <div class="bg-white wrapper-input">
-        <input
-          class="bg-white outline-none placeholder:text-secondary focus:border-primary" 
-          type="number" 
-          placeholder="Conta corrente"
-        >
-      </div>
-
+      <input
+        type="number" 
+        placeholder="Conta corrente"
+        class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-placeholder"
+      >
+      <!-- Agency & Account -->
       <div class="grid grid-cols-2 gap-5">
         <div class="flex flex-col">
           <label for="agency" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
             Agência
           </label>
-          <div class="bg-white wrapper-input">
             <input
               id="agency"
               type="text" 
-              class="w-full bg-white outline-none placeholder:text-secondary" 
+              class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-secondary" 
             >
-          </div>
           <span class="text-xs text-gray">*Sem o dígito</span>
         </div>
 
@@ -66,54 +61,54 @@
         <label for="account" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-4">
           Conta
         </label>
-        <div class="bg-white wrapper-input">
-          <input
-            id="account"
-            type="text" 
-            class="w-full bg-white outline-none placeholder:text-secondary" 
-          >
-        </div>
+        
+        <input
+          id="account"
+          type="text" 
+          class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-secondary" 
+        >
         <span class="text-xs text-gray">*Com o dígito</span>
        </div>
       </div>
 
+      <!-- Full Name -->
       <label for="name" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
         <img src="../assets/transfer-icons/mdi_person.svg" alt="ícone usuário">
         Nome Completo <span class="font-normal">do favorecido</span>
       </label>
-      <div class="bg-white wrapper-input">
-        <input
-          id="name"
-          type="text" 
-          placeholder="Nome"
-          class="bg-white outline-none placeholder:text-placeholder" 
-        >
-      </div>
-
+      <input
+        id="name"
+        type="text" 
+        placeholder="Nome"
+        class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-placeholder" 
+      >
+      <!-- CPF -->
       <label for="email" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
         <img src="../assets/transfer-icons/icon-park-outline_id-card.svg" alt="ícone usuário">
         CPF ou CNPJ <span class="font-normal">do favorecido</span>
       </label>
-      <div class="bg-white wrapper-input">
-        <input
+      <input
         type="number" 
         placeholder="000.000.000-00"
-        class="outline-none bg-whiteplaceholder:text-placeholder" 
-        >
-      </div>
+        class="w-full px-3 py-2 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-placeholder"
+      >
 
       <span class="block w-[75%] mx-auto my-3 border-b border-divider"></span>
 
+      <!-- Value & Date -->
       <div class="grid grid-cols-2 gap-5">
         <div class="flex flex-col">
           <label for="value" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
             Valor
           </label>
-          <div class="flex border rounded border-divider">
+          <div class="flex">
             <span class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-divider text-gray">
               R$
             </span>
-            <input class="w-full px-2 py-2 rounded-lg outline-none text-secondary" type="number">
+            <input 
+              type="number"
+              class="w-full px-3 py-2 bg-white border outline-none peer border-divider focus:border-primary placeholder:text-secondary"
+            >
           </div>
         </div>
 
@@ -121,25 +116,29 @@
           <label for="value" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
             Data
           </label>
-          <div class="flex border rounded border-divider">
+          <div class="flex">
             <img class="w-11 h-[42px]" src="../assets/transfer-icons/zondicons_calendar.svg" alt="">
-            <input class="w-full px-2 py-2 text-sm rounded-lg outline-none text-gray" type="date">
+            <input 
+              type="date"
+              class="w-full px-2 py-2 text-sm bg-white border rounded rounded-l-none outline-none focus:border-primary text-gray border-divider" 
+            >
           </div>
         </div>
       </div>
 
+       <!-- Description -->
       <div class="mt-8 mb-1">
         <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
           <img src="../assets/transfer-icons/bx_edit.svg" alt="ícone editar">
           Descrição
         </label>
         <textarea
-          class="w-full p-3 border outline-none resize-none placeholder:text-placeholder text-secondary border-divider"
           id="description"
           placeholder="Exemplo: Pagamento pelos serviços de Marketing Digital"
+          class="w-full p-3 border rounded outline-none resize-none placeholder:text-placeholder text-secondary border-divider focus:border-primary"
         ></textarea>
       </div>
-
+     
       <div class="flex items-center justify-center my-12">
         <a class="btn" href="./receipt.html">
           Confirmar transferência
