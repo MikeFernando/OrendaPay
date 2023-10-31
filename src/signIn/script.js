@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
     validateEmail()
     validatePassword()
 
-   if (email.value.length === 0 || password.value.length === 0)
+   if (email.value.length === 0 || password.value.length <= 8)
    {
         errorEmail.innerText = 'Informe um email'
         errorPassword.innerText = 'Informe a senha'

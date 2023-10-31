@@ -1911,6 +1911,14 @@ html {
   --tw-ring-color: rgb(245 131 31 / var(--tw-ring-opacity));
 }
 
+.disabled\:opacity-5:disabled{
+  opacity: 0.05;
+}
+
+.disabled\:opacity-50:disabled{
+  opacity: 0.5;
+}
+
 .peer:checked ~ .peer-checked\:after\:w-20::after{
   content: var(--tw-content);
   width: 5rem;
