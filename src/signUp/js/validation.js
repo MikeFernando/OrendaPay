@@ -37,6 +37,7 @@ function handleOtp(e) {
 
     if (fieldIndex == inputs.length -1)
     {
+        document.querySelector('#btn-validate').disabled = false
         validate.focus()
     }
 }

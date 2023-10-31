@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
    }
    else
    {
-    window.open('https://amazing-griffin-961e34.netlify.app/home')
+        window.open('https://amazing-griffin-961e34.netlify.app/home')
    }
 
 })
@@ -70,10 +70,12 @@ function validatePassword() {
                 if (password.value.length < 8)
                 {
                     setError(password, errorPassword)
+                    document.querySelector('#access').disabled = true
                 }
                 else
                 {
                     removeError(password, errorPassword)
+                    document.querySelector('#access').disabled = false
                 }
             }, 1000)
         })
