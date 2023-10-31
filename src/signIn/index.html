@@ -2,70 +2,81 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../dist/output.css">
-  <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Login</title>
 </head>
 
 <body>
-  <header class="bg-secondary flex justify-between items-center h-[184px] rounded-b-[44px] pl-3 pr-11">
-    <a href="../index.html">
-      <img src="../assets/svg/arrow-back.svg" alt="voltar">
-    </a>
-    <p class="font-sans text-base font-bold text-white">
-      Faça login na sua conta
-    </p>
-    <div />
-  </header>
-
-  <div class="py-3 px-12 flex mx-auto bg-[#F9F9F9] w-[228px] h-24 rounded-2xl -translate-y-14 shadow-md">
-    <img src="../assets/logo.png" alt="Logo Orenda pay">
-  </div>
-
-  <main class="px-5 pb-28">
-    <form action="">
-      <label for="email" class="block font-['Poppins'] font-bold text-secondary">
-        E-mail
-      </label>
-      <div class="flex gap-2 border rounded border-divider">
-        <img class="pl-2" src="../assets/svg/email.svg" alt="email" />
-        <input 
-          type="email" 
-          placeholder="exemplo@gmail.com"
-          class="py-2 pr-3 overflow-hidden rounded outline-none" 
-        >
-      </div>
-
-      <label for="password" class="block font-['Poppins'] mt-3 font-bold text-secondary">
-        Senha
-      </label>
-      <div class="flex gap-2 border rounded border-divider">
-        <img class="pl-2" src="../assets/svg/lock.svg" alt="email" />
-        <input 
-          type="password" 
-          placeholder="*******"
-          class="py-2 pr-3 overflow-hidden rounded outline-none placeholder:translate-y-1" 
-        >
-      </div>
-
-      <div class="flex flex-col items-center justify-center">
-        <a href="../home" class="w-full mt-8 mb-5 text-center btn">
-          Acessar
+    <header class="bg-secondary flex justify-between items-center h-[184px] rounded-b-[44px] pl-3 pr-11">
+        <a href="../index.html">
+            <img src="../assets/svg/arrow-back.svg" alt="voltar" />
         </a>
+        <p class="font-sans text-base font-bold text-white">
+            Faça login na sua conta
+        </p>
+        <div />
+    </header>
 
-        <a href="../signUp/validation.html" class="text-base underline text-secondary">
-          Esqueceu a senha?
-        </a>
+    <div class="py-3 px-12 flex mx-auto bg-[#F9F9F9] w-[228px] h-24 rounded-2xl -translate-y-14 shadow-md">
+        <img src="../assets/logo.png" alt="Logo Orenda pay" />
+    </div>
 
-        <img class="mt-4" src="../assets/divider.png">
+    <main class="px-5 pb-28">
+        <form action="" id="form">
+            <label for="email" class="block font-['Poppins'] font-bold text-secondary">
+                E-mail
+            </label>
+            <div class="flex gap-2 border rounded border-divider">
+                <img class="pl-2" src="../assets/svg/email.svg" alt="email" />
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="exemplo@gmail.com"
+                    oninput="validateEmail()"
+                    class="flex-1 py-2 pr-3 overflow-hidden bg-white rounded outline-none" />
+            </div>
+            <small id="errorEmail" class="hidden text-red-500">
+                Informe um e-mail válido
+            </small>
 
-        <a href="../signUp" class="w-full mt-8 text-center btn-outline">
-          Cadastre-se
-        </a>
-      </div>
-    </form>
-  </main>
+            <label for="password" class="block font-['Poppins'] mt-3 font-bold text-secondary">
+                Senha
+            </label>
+            <div class="flex gap-2 border rounded border-divider">
+                <img class="pl-2" src="../assets/svg/lock.svg" alt="email" />
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="*******"
+                    oninput="validatePassword()"
+                    class="py-2 pr-3 overflow-hidden bg-white rounded outline-none placeholder:translate-y-1" />
+            </div>
+            <small id="errorPassword" class="hidden text-red-500">
+                Mínimo de 8 caracteres
+            </small>
+
+            <button
+                type="submit"
+                class="block max-w-[300px] mx-auto w-full mt-8 mb-5 text-center btn"
+            >
+                Acessar
+            </button>
+
+            <a href="../signUp/validation.html" class="block text-base text-center underline text-secondary">
+                Esqueceu a senha?
+            </a>
+
+            <img class="mt-4" src="../assets/divider.png" />
+
+            <a href="../signUp" class="block max-w-[300px] mx-auto w-full mt-8 text-center btn-outline">
+                Cadastre-se
+            </a>
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
