@@ -61,7 +61,7 @@ function validateEmail() {
 }
 
 function validatePassword() {
-    if (email.value.length > 0)
+    if (password.value.length > 0)
     {
         password.addEventListener('keyup', () => {
             clearTimeout(time)

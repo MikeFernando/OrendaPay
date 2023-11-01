@@ -1718,10 +1718,6 @@ html {
   text-decoration-line: underline;
 }
 
-.opacity-50{
-  opacity: 0.5;
-}
-
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1915,20 +1911,8 @@ html {
   --tw-ring-color: rgb(245 131 31 / var(--tw-ring-opacity));
 }
 
-.disabled\:cursor-not-allowed:disabled{
-  cursor: not-allowed;
-}
-
 .disabled\:opacity-50:disabled{
   opacity: 0.5;
-}
-
-.disabled\:opacity-10:disabled{
-  opacity: 0.1;
-}
-
-.disabled\:opacity-100:disabled{
-  opacity: 1;
 }
 
 .peer:checked ~ .peer-checked\:after\:w-20::after{

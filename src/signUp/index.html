@@ -21,36 +21,62 @@
 
     <main class="px-5 pb-28">
         <form action="" class="mt-8 space-y-3">
-            <input
-                type="text"
-                placeholder="Nome completo"
-                class="w-full border outline-none wrapper-input focus:border-primary text-secondary"
-            >
-            <input
-                type="email"
-                placeholder="E-mail"
-                class="w-full border outline-none wrapper-input focus:border-primary text-secondary"
-            >
-            <input
-                type="text"
-                placeholder="CPF ou CNPJ"
-                class="w-full border outline-none wrapper-input focus:border-primary text-secondary"
-            >
-            <input
-                type="text"
-                placeholder="Telefone celular"
-                class="w-full border outline-none wrapper-input focus:border-primary text-secondary"
-            >
+            <div>
+                <input
+                    type="text"
+                    placeholder="Nome completo"
+                    oninput="validateName()"
+                    class="w-full border outline-none wrapper-input focus:border-primary text-secondary name"
+                >
+                <span class="hidden text-xs text-red-500 error-name">Digite seu nome completo</span>
+            </div>
+            <div>
+                <input
+                    type="email"
+                    placeholder="E-mail"
+                    oninput="validateEmail()"
+                    class="w-full border outline-none wrapper-input focus:border-primary text-secondary email"
+                >
+                <span class="hidden text-xs text-red-500 error-email">Digite um email válido</span>
+            </div>
+            <div>
+                <input
+                    type="text"
+                    maxlength="14"
+                    autocomplete="off"
+                    placeholder="CPF ou CNPJ"
+                    oninput="validateCPF()"
+                    class="w-full border outline-none wrapper-input focus:border-primary text-secondary cpf"
+                >
+                <span class="hidden text-xs text-red-500 error-cpf">Digite seu CPF ou CNPJ</span>
+            </div>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Telefone celular"
+                    oninput="validatePhone()"
+                    class="w-full border outline-none wrapper-input focus:border-primary text-secondary phone"
+                >
+                <span class="hidden text-xs text-red-500 error-phone">Digite o numero do seu celular</span>
+            </div>
             <span class="text-xs text-black font-['Poppins']">
                 *Enviaremos um código SMS de confirmação.
             </span>
-            <input class="w-full border outline-none wrapper-input focus:border-primary text-secondary" type="password"
-                placeholder="Senha">
+            <div>
+                <input
+                    type="password"
+                    placeholder="Senha"
+                    oninput="validatePassword()"
+                    class="w-full border outline-none wrapper-input focus:border-primary text-secondary password"
+                >
+                <span class="hidden text-xs text-red-500 error-password">Digite uma senha com no mínimo 8 caracteres</span>
+            </div>
 
             <div class="flex items-start gap-2 mt-4">
                 <input
                     id="termos"
                     type="checkbox"
+                    required
                     value=""
                     class="w-5 h-5"
                 >
@@ -69,9 +95,7 @@
 
             <div class="flex flex-col items-center justify-center">
                 <button class="btn w-[300px] mt-4">
-                    <a href="./validation.html">
-                        Enviar Dados
-                    </a>
+                    Enviar Dados
                 </button>
 
                 <a href="../signIn" class="mt-4 font-bold underline text-primary">
