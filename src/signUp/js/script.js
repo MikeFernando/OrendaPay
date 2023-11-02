@@ -12,8 +12,6 @@ const errorPhone = document.querySelector('.error-phone')
 const errorPassword = document.querySelector('.error-password')
 
 const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-const cpfOrCnpjRegex =  /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
-// const cpfCnpjRegex = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
 
 let time = null
 
@@ -195,5 +193,4 @@ function validatePassword() {
     }
 
 }
-
 
