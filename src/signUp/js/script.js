@@ -1,18 +1,21 @@
-const name = document.querySelector('.name')
+const nome = document.querySelector('.name')
 const email = document.querySelector('.email')
-const cpf = document.querySelector('.cpf')
+const numero = document.querySelector('.cpf-cnpj')
 const phone = document.querySelector('.phone')
 const password = document.querySelector('.password')
 
+// # ERROR MESSAGE
 const errorName = document.querySelector('.error-name')
 const errorEmail = document.querySelector('.error-email')
-const errorCPF = document.querySelector('.error-cpf')
+const errorCPFCNPJ = document.querySelector('.error-cpf')
 const errorPhone = document.querySelector('.error-phone')
 const errorPassword = document.querySelector('.error-password')
 
-let time = null
 const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 const cpfOrCnpjRegex =  /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
+// const cpfCnpjRegex = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
+
+let time = null
 
 function setError(input, error) {
     input.style.border = '1px solid #dc2626'
@@ -25,19 +28,19 @@ function removeError(input, error) {
 }
 
 function validateName() {
-    if (name.value.length > 0)
+    if (nome.value.length > 0)
     {
-        name.addEventListener('keyup', () => {
+        nome.addEventListener('keyup', () => {
             clearTimeout(time)
 
             time = setTimeout(() => {
-                if (name.value.length < 3)
+                if (nome.value.length < 3)
                 {
-                    setError(name, errorName)
+                    setError(nome, errorName)
                 }
                 else
                 {
-                    removeError(name, errorName)
+                    removeError(nome, errorName)
                 }
             }, 1500)
         })
@@ -72,40 +75,47 @@ function validateEmail() {
     }
 }
 
-function validateCPF() {
-    cpf.addEventListener('keypress', () => {
-        let cpfLength = cpf.value.length
+function validateCPFCNPJ() {
+    let CPF = numero.value
+    let CNPJ = numero.value
 
-        if (cpfLength === 3 || cpfLength === 7)
-        {
-            cpf.value += '.'
-        }
-        else if (cpfLength === 11)
-        {
-            cpf.value += '-'
-        }
-    })
-
-    if (cpf.value.length > 0)
+    if (CPF.length === 11)
     {
-        cpf.addEventListener('keyup', () => {
+        // Formata CPF (###.###.###-##)
+        numero.value = CPF.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        CPF = numero.value.replace(/[.-]/g, "")
+    }
+    else if (CNPJ.length === 17)
+    {
+        // Formata CNPJ (##.###.###/####-##)
+        CNPJ = numero.value.replace(/[.-]/g, "")
+        numero.value = CNPJ.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+    }
+
+    // Validar apenas se o input conter valores
+    if (numero.value.length > 0)
+    {
+        const numberCPF = numero.value
+        const numberCNPJ = numero.value
+
+        numero.addEventListener('keyup', () => {
             clearTimeout(time)
 
             time = setTimeout(() => {
-                if (cpf.value.length !== 14)
+                if (numberCPF.length !== 14 && numberCNPJ.length !== 18)
                 {
-                    setError(cpf, errorCPF)
+                    setError(numero, errorCPFCNPJ)
                 }
                 else
                 {
-                    removeError(cpf, errorCPF)
+                    removeError(numero, errorCPFCNPJ)
                 }
             }, 1500)
         })
     }
     else
     {
-        setError(cpf, errorCPF)
+        setError(numero, errorCPFCNPJ)
     }
 }
 
@@ -185,3 +195,5 @@ function validatePassword() {
     }
 
 }
+
+
