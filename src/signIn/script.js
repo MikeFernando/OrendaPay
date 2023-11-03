@@ -3,6 +3,7 @@ const email = document.querySelector('#email')
 const errorEmail = document.querySelector('#errorEmail')
 const password = document.querySelector('#password')
 const errorPassword = document.querySelector('#errorPassword')
+
 const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 form.addEventListener('submit', (e) => {
@@ -14,7 +15,7 @@ form.addEventListener('submit', (e) => {
    if (email.value.length === 0 || password.value.length <= 8)
    {
         errorEmail.innerText = 'Informe um email'
-        errorPassword.innerText = 'Informe a senha'
+        errorPassword.innerText = 'Mínimo de 8 caracteres'
         return
    }
    else
@@ -46,12 +47,13 @@ function validateEmail() {
                 if (!emailRegex.test(email.value))
                 {
                     setError(email, errorEmail)
+                    document.querySelector('#access').disabled = true
                 }
                 else
                 {
                     removeError(email, errorEmail)
                 }
-            }, 1500)
+            }, 1000)
         })
     }
     else
@@ -72,7 +74,7 @@ function validatePassword() {
                     setError(password, errorPassword)
                     document.querySelector('#access').disabled = true
                 }
-                else
+                else if(emailRegex.test(email.value))
                 {
                     removeError(password, errorPassword)
                     document.querySelector('#access').disabled = false
@@ -83,6 +85,6 @@ function validatePassword() {
     else
     {
         setError(password, errorPassword)
+        document.querySelector('#access').disabled = true
     }
-
 }
