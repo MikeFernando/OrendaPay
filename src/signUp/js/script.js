@@ -1,8 +1,11 @@
+const form = document.querySelector('#form')
 const nome = document.querySelector('.name')
 const email = document.querySelector('.email')
 const numero = document.querySelector('.cpf-cnpj')
 const phone = document.querySelector('.phone')
 const password = document.querySelector('.password')
+const termos = document.querySelector('#termos')
+const buttonSubmit = document.querySelector('.btn')
 
 // # ERROR MESSAGE
 const errorName = document.querySelector('.error-name')
@@ -14,6 +17,33 @@ const errorPassword = document.querySelector('.error-password')
 const emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 let time = null
+
+form.addEventListener('submit', (evt) => {
+    evt.preventDefault()
+
+    validateName()
+    validateEmail()
+    validateCPFCNPJ()
+    validatePhone()
+    validatePassword()
+
+    if(!termos.checked) {
+        return
+    }
+
+    if (
+        nome.value.length === 0 &&
+        email.value.length === 0 &&
+        numero.value.length === 0 &&
+        phone.value.length === 0 &&
+        password.value.length === 0
+    )
+    {
+        return
+    }
+
+    window.open('https://amazing-griffin-961e34.netlify.app/signin')
+})
 
 function setError(input, error) {
     input.style.border = '1px solid #dc2626'
