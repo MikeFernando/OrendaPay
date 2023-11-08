@@ -255,32 +255,5 @@ function validateDate() {
     }
 }
 
-function validateTextArea() {
-    let time = null
-
-    nome.value = nome.value.replace(/\d/g, '')
-
-    if (nome.value.length > 0)
-    {
-        nome.addEventListener('keyup', () => {
-            clearTimeout(time)
-
-            time = setTimeout(() => {
-                if (nome.value.length < 3)
-                {
-                    setError(nome, errorName)
-                }
-                else
-                {
-                    removeError(nome, errorName)
-                }
-            }, 1000)
-        })
-    }
-    else
-    {
-        setError(nome, errorName)
-    }
-}
 
 
