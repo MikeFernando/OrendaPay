@@ -5,6 +5,8 @@ const agency = document.querySelector('#agency')
 const account = document.querySelector('#account')
 const nome = document.querySelector('#nome')
 const numero = document.querySelector('.cpf-cnpj')
+const money = document.querySelector('#money')
+const date = document.querySelector('#date')
 
 const submit = document.querySelector('.btn')
 
@@ -15,6 +17,8 @@ const agencyError = document.querySelector('.error-agency')
 const accountError = document.querySelector('.error-account')
 const errorName = document.querySelector('.error-name')
 const errorCPFCNPJ = document.querySelector('.error-cpf')
+const moneyError = document.querySelector('.error-money')
+const errorDate = document.querySelector('.error-date')
 
 form.addEventListener('submit', (evt) => {
     evt.preventDefault()
@@ -25,6 +29,9 @@ form.addEventListener('submit', (evt) => {
     validateAccount()
     validateName()
     validateCPFCNPJ()
+    validateMoney()
+    validateDate()
+    validateTextArea()
 })
 
 function setError(input, errorMessage) {
@@ -199,3 +206,81 @@ function validateCPFCNPJ() {
         setError(numero, errorCPFCNPJ)
     }
 }
+
+function validateMoney() {
+    let time = null
+
+    if (money.value.length > 0)
+    {
+        money.addEventListener('keyup', () => {
+            clearTimeout(time)
+
+            $('#money').mask('000.000.000.000.000,00', {reverse: true})
+
+            time = setTimeout(() => {
+                if (money.value.length === 0)
+                {
+                    setError(money, moneyError)
+                }
+                else
+                {
+                    removeError(money, moneyError)
+                }
+            }, 1000)
+        })
+    }
+    else
+    {
+        setError(money, moneyError)
+    }
+
+
+}
+
+function validateDate() {
+    if (date.value)
+    {
+        if (!date.value)
+        {
+            setError(date, errorDate)
+        }
+        else
+        {
+            removeError(date, errorDate)
+        }
+    }
+    else
+    {
+        setError(date, errorDate)
+    }
+}
+
+function validateTextArea() {
+    let time = null
+
+    nome.value = nome.value.replace(/\d/g, '')
+
+    if (nome.value.length > 0)
+    {
+        nome.addEventListener('keyup', () => {
+            clearTimeout(time)
+
+            time = setTimeout(() => {
+                if (nome.value.length < 3)
+                {
+                    setError(nome, errorName)
+                }
+                else
+                {
+                    removeError(nome, errorName)
+                }
+            }, 1000)
+        })
+    }
+    else
+    {
+        setError(nome, errorName)
+    }
+}
+
+

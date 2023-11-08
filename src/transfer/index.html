@@ -130,23 +130,28 @@
                 placeholder="CPF ou CNPJ"
                 class="w-full border outline-none wrapper-input focus:border-primary text-secondary cpf-cnpj"
             >
-            <span class="hidden text-xs text-red-500 error-cpf">Digite seu CPF ou CNPJ</span>
+            <span class="hidden text-xs text-red-500 error-cpf">Informe o CPF ou CNPJ do favorecido.</span>
 
             <span class="block w-[75%] mx-auto my-3 border-b border-divider"></span>
             <!-- Value & Date -->
             <div class="grid grid-cols-2 gap-5">
                 <div class="flex flex-col">
-                    <label for="value" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+                    <label for="money" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
                         Valor
                     </label>
                     <div class="flex">
-                        <span
-                            class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-divider text-gray">
+                        <span class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-divider text-gray">
                             R$
                         </span>
-                        <input type="number"
-                            class="w-full px-3 py-2 bg-white border border-l-0 outline-none peer border-divider focus:border-primary placeholder:text-secondary">
+                        <input
+                            id="money"
+                            type="text"
+                            oninput="validateMoney()"
+                            inputmode="numeric"
+                            class="w-full px-3 py-2 bg-white border border-l-0 outline-none peer border-divider focus:border-primary placeholder:text-secondary"
+                        >
                     </div>
+                    <span class="hidden text-xs text-red-500 error-money">Obrigatório.</span>
                 </div>
 
                 <div class="flex flex-col">
@@ -155,9 +160,13 @@
                     </label>
                     <div class="flex">
                         <img class="w-11 h-[42px]" src="../assets/transfer-icons/zondicons_calendar.svg" alt="">
-                        <input type="date"
-                            class="w-full px-2 py-2 text-sm bg-white border border-l-0 rounded rounded-l-none outline-none focus:border-primary text-gray border-divider">
+                        <input
+                            id="date"
+                            type="date"
+                            onchange="validateDate()"
+                            class="w-full px-2 py-2 text-sm bg-white border border-l-0 rounded rounded-l-none outline-none focus:border-primary text-secondary border-divider">
                     </div>
+                    <span class="hidden text-xs text-red-500 error-date">Obrigatório.</span>
                 </div>
             </div>
 
@@ -212,6 +221,8 @@
     </nav>
 
     <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </body>
 
 </html>
