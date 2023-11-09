@@ -31,7 +31,6 @@ form.addEventListener('submit', (evt) => {
     validateCPFCNPJ()
     validateMoney()
     validateDate()
-    validateTextArea()
 })
 
 function setError(input, errorMessage) {
