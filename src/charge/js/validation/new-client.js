@@ -2,13 +2,14 @@ const form = document.querySelector('#form')
 const account = document.querySelector('#account')
 const numero = document.querySelector('#cpf-cnpj')
 const phone = document.querySelector('#phone')
+const cep = document.querySelector('#cep')
 
 const buttonSubmit = document.querySelector('.btn')
-
 
 // ERROR-messages
 const errorAccount = document.querySelector('.error-type-account')
 const errorCPFCNPJ = document.querySelector('.error-cpf')
+const errorCep = document.querySelector('.error-cep')
 
 form.addEventListener('submit', (evt) => {
     evt.preventDefault()
@@ -16,6 +17,7 @@ form.addEventListener('submit', (evt) => {
     validateAccount()
     validateCPFCNPJ()
     validatePhone()
+    validateCep()
 
     console.log('validado...')
 });
@@ -110,4 +112,32 @@ function validateCPFCNPJ() {
 
 function validatePhone() {
     $('#phone').mask('(00) 0000-0000');
+}
+
+function validateCep() {
+    let time = null
+
+    if (cep.value.length > 0)
+    {
+        cep.addEventListener('keyup', () => {
+            clearTimeout(time)
+
+            $('#cep').mask('00000-000');
+
+            time = setTimeout(() => {
+                if (cep.value.length !== 9)
+                {
+                    setError(cep, errorCep)
+                }
+                else
+                {
+                    removeError(cep, errorCep)
+                }
+            }, 1000)
+        })
+    }
+    else
+    {
+        setError(cep, errorCep)
+    }
 }

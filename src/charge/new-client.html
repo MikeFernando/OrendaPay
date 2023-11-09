@@ -91,10 +91,15 @@
             <label for="cep" class="mt-4 font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
                 CEP<span class="text-[#D61212]">*</span>
             </label>
-            <input id="cep" placeholder="00000-000"
-                class="mb-4 bg-white outline-none focus:border-primary wrapper-input placeholder:text-gray">
+            <input
+                id="cep"
+                oninput="validateCep()"
+                placeholder="00000-000"
+                class="bg-white outline-none focus:border-primary wrapper-input placeholder:text-gray"
+            >
+            <span class="hidden text-xs text-red-500 error-cep">Este campo é obrigatório.</span>
 
-            <label for="city" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+            <label for="city" class="mt-4 font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
                 Cidade<span class="text-[#D61212]">*</span>
             </label>
             <input id="city" placeholder="Cidade"
