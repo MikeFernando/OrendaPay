@@ -22,7 +22,7 @@
   </div>
 
   <main class="min-h-screen px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-main rounded-t-2xl">
-    
+
     <form action="">
       <!-- Title Charge -->
       <label for="kit" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
@@ -30,9 +30,9 @@
         <span><img src="../assets/svg/akar-icons_info-fill.svg" alt="info"></span>
       </label>
       <input
-        id="kit" 
+        id="kit"
         placeholder="ex. kit de inverno"
-        class="w-full px-3 py-2 mb-4 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-gray" 
+        class="w-full px-3 py-2 mb-4 bg-white border rounded outline-none border-divider focus:border-primary placeholder:text-gray"
       >
       <!-- Payment Value  -->
       <div class="flex flex-col mt-4 mb-8">
@@ -44,10 +44,10 @@
           <span class="flex items-center justify-center w-12 h-[42px] p-2 text-sm font-bold bg-primary text-white  border rounded border-primary rounded-r-none">
             R$
           </span>
-          <input 
+          <input
             type="number"
             placeholder="0,00"
-            class="w-full px-2 py-2 border border-l-0 rounded rounded-l-none outline-none focus:border-primary border-divider text-secondary" 
+            class="w-full px-2 py-2 border border-l-0 rounded rounded-l-none outline-none focus:border-primary border-divider text-secondary"
           >
         </div>
       </div>
@@ -55,14 +55,14 @@
       <!-- Limit Date  -->
       <div class="flex flex-col">
         <label for="value" class="font-['Poppins'] font-bold text-gray flex items-center gap-1 mb-1">
-          Data limite  
+          Data limite
         </label>
         <div class="flex">
           <span class="flex items-center justify-center w-12 h-[42px] text-sm font-bold bg-primary text-white  border rounded border-primary rounded-r-none">
             <img class="w-12 h-[42px]" src="../assets/svg/calendar-white.svg" alt="">
           </span>
-          <input 
-            class="flex-1 w-full px-2 py-2 text-sm bg-white border border-l-0 rounded rounded-l-none outline-none border-divider focus:border-primary text-gray" 
+          <input
+            class="flex-1 w-full px-2 py-2 text-sm bg-white border border-l-0 rounded rounded-l-none outline-none border-divider focus:border-primary text-gray"
             type="date"
           >
         </div>
@@ -92,7 +92,7 @@
         <img src="../assets/transfer-icons/debit.svg" alt="Débito">
         Débito
       </a>
-      
+
       <a href="../charge/credit.html" class="flex items-center justify-center gap-1 my-3 text-center text-white btn-outline bg-primary">
         <img src="../assets/transfer-icons/credit-white.svg" alt="Crédito">
         Crédito
@@ -126,7 +126,18 @@
 
       <label for="countries" class="block mt-6 mb-2 text-sm font-medium text-secondary">Limite de parcelamento</label>
       <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
-        <option selected>À vista</option>
+        <option class="px-3 py-2" selected>À vista</option>
+        <option class="text-secondary">Parcelado em 2x</option>
+        <option class="text-secondary">Parcelado em 3x</option>
+        <option class="text-secondary">Parcelado em 4x</option>
+        <option class="text-secondary">Parcelado em 5x</option>
+        <option class="text-secondary">Parcelado em 6x</option>
+        <option class="text-secondary">Parcelado em 7x</option>
+        <option class="text-secondary">Parcelado em 8x</option>
+        <option class="text-secondary">Parcelado em 9x</option>
+        <option class="text-secondary">Parcelado em 10x</option>
+        <option class="text-secondary">Parcelado em 11x</option>
+        <option class="text-secondary">Parcelado em 12x</option>
       </select>
 
       <div class="flex items-center mt-5">
@@ -136,7 +147,19 @@
 
       <label for="countries" class="block mt-6 mb-2 text-sm font-medium text-secondary">Repassar juros/taxa a partir de qual parcela?</label>
       <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
-        <option selected>Nenhum</option>
+        <option class="px-3 py-2" selected>Nenhuma</option>
+        <option class="text-secondary">A partir da 1ª</option>
+        <option class="text-secondary">A partir da 2ª</option>
+        <option class="text-secondary">A partir da 3ª</option>
+        <option class="text-secondary">A partir da 4ª</option>
+        <option class="text-secondary">A partir da 5ª</option>
+        <option class="text-secondary">A partir da 6ª</option>
+        <option class="text-secondary">A partir da 7ª</option>
+        <option class="text-secondary">A partir da 8ª</option>
+        <option class="text-secondary">A partir da 9ª</option>
+        <option class="text-secondary">A partir da 10ª</option>
+        <option class="text-secondary">A partir da 11ª</option>
+        <option class="text-secondary">A partir da 12ª</option>
       </select>
 
       <a href="../sales-simulator" class="block mt-3 text-sm font-bold underline text-primary">
