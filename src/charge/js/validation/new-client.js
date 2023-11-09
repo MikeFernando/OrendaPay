@@ -1,6 +1,7 @@
 const form = document.querySelector('#form')
 const account = document.querySelector('#account')
 const numero = document.querySelector('#cpf-cnpj')
+const phone = document.querySelector('#phone')
 
 const buttonSubmit = document.querySelector('.btn')
 
@@ -14,6 +15,7 @@ form.addEventListener('submit', (evt) => {
 
     validateAccount()
     validateCPFCNPJ()
+    validatePhone()
 
     console.log('validado...')
 });
@@ -104,4 +106,8 @@ function validateCPFCNPJ() {
     {
         setError(numero, errorCPFCNPJ)
     }
+}
+
+function validatePhone() {
+    $('#phone').mask('(00) 0000-0000');
 }
