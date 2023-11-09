@@ -3,6 +3,8 @@ const account = document.querySelector('#account')
 const numero = document.querySelector('#cpf-cnpj')
 const phone = document.querySelector('#phone')
 const cep = document.querySelector('#cep')
+const city = document.querySelector('#city')
+const state = document.querySelector('#state')
 
 const buttonSubmit = document.querySelector('.btn')
 
@@ -10,6 +12,8 @@ const buttonSubmit = document.querySelector('.btn')
 const errorAccount = document.querySelector('.error-type-account')
 const errorCPFCNPJ = document.querySelector('.error-cpf')
 const errorCep = document.querySelector('.error-cep')
+const errorCity = document.querySelector('.error-city')
+const errorState = document.querySelector('.error-state')
 
 form.addEventListener('submit', (evt) => {
     evt.preventDefault()
@@ -18,6 +22,8 @@ form.addEventListener('submit', (evt) => {
     validateCPFCNPJ()
     validatePhone()
     validateCep()
+    validateCity()
+    validateState()
 
     console.log('validado...')
 });
@@ -111,7 +117,7 @@ function validateCPFCNPJ() {
 }
 
 function validatePhone() {
-    $('#phone').mask('(00) 0000-0000');
+    $('#phone').mask('(00) 00000-0000');
 }
 
 function validateCep() {
@@ -139,5 +145,73 @@ function validateCep() {
     else
     {
         setError(cep, errorCep)
+    }
+}
+
+function validateCity() {
+    let time = null
+
+    if (city.value.length > 0)
+    {
+        city.addEventListener('keyup', (event) => {
+            clearTimeout(time)
+
+            const inputValue = event.target.value;
+            const regex = /^[^\d]+$/; // A regex que aceita apenas caracteres que não são números
+
+            if (!regex.test(inputValue)) {
+                // Se o valor contém números, remova os números do final da string
+                event.target.value = inputValue.replace(/\d/g, '');
+            }
+
+            time = setTimeout(() => {
+                if (city.value.length < 3)
+                {
+                    setError(city, errorCity)
+                }
+                else
+                {
+                    removeError(city, errorCity)
+                }
+            }, 1000)
+        })
+    }
+    else
+    {
+        setError(city, errorCity)
+    }
+}
+
+function validateState() {
+    let time = null
+
+    if (state.value.length > 0)
+    {
+        state.addEventListener('keyup', (event) => {
+            clearTimeout(time)
+
+            const inputValue = event.target.value;
+            const regex = /^[^\d]+$/; // A regex que aceita apenas caracteres que não são números
+
+            if (!regex.test(inputValue)) {
+                // Se o valor contém números, remova os números do final da string
+                event.target.value = inputValue.replace(/\d/g, '');
+            }
+
+            time = setTimeout(() => {
+                if (state.value.length < 3)
+                {
+                    setError(state, errorState)
+                }
+                else
+                {
+                    removeError(state, errorState)
+                }
+            }, 1000)
+        })
+    }
+    else
+    {
+        setError(state, errorState)
     }
 }
