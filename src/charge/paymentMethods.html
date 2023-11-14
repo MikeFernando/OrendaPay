@@ -2,153 +2,176 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../dist/output.css">
-  <title>Criar Cobrança</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Criar Cobrança</title>
 </head>
 
 <body>
-  <div class="pb-3 bg-secondary">
-    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
-      <a href="../home">
-        <img src="../assets/svg/arrow-back.svg" alt="voltar">
-      </a>
-      <p class="font-sans text-base font-bold text-white ">
-        Criar Cobrança
-      </p>
-      <div />
-    </header>
-  </div>
-
-  <main class="min-h-screen px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-main rounded-t-2xl">
-    <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
-      Escolha o(s) cliente(s)
-    </label>
-    <div class="flex w-full h-12 px-1 py-1 bg-white rounded-md">
-      <div class="bg-[#09F] text-white rounded-md w-64 text-base mr-2 flex justify-center items-center px-2 min-w-[253px]">
-        Nome sobrenome - CPF...
-        <a class="ml-4 cursor-pointer">
-          <img src="../assets/svg/x.svg" alt="fechar">
-        </a>
-      </div>
-      <input id="name" class="bg-white placeholder:text-placeholder w-[20%] px-2 outline-none text-secondary" type="text" placeholder="Nome...">
+    <div class="pb-3 bg-secondary">
+        <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+            <a href="../home">
+                <img src="../assets/svg/arrow-back.svg" alt="voltar">
+            </a>
+            <p class="font-sans text-base font-bold text-white ">
+                Criar Cobrança
+            </p>
+            <div />
+        </header>
     </div>
 
-    <a href="./new-client.html" class="flex items-center px-6 py-3 font-bold text-white bg-green max-w-[190px] rounded-xl mt-3">
-      <img class="w-6 h-6 mr-3" src="../assets/svg/fluent_person-add-20-filled.svg" alt="ícone usuário">
-      Novo Cliente
-    </a>
-
-    <span class="block w-[75%] mx-auto my-8 border-b border-divider"></span>
-
-    <div class="flex items-center">
-      <span class="font-['Poppins'] text-sm text-gray mr-1">Selecione o meio de pagamento</span>
-      <span>
-        <img src="../assets/svg/tabler_hand-click.svg" alt="click">
-      </span>
-    </div>
-
-    <a href="./boleto.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-      <div>
-        <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
-      </div>
-      <button>
-        Boleto
-      </button>
-    </a>
-
-    <a href="../pix/index.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-      <div>
-        <img src="../assets/transfer-icons/pix.svg" alt="pix">
-      </div>
-      <button>
-        Pix
-      </button>
-    </a>
-
-    <a href="#" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-      <div>
-        <img src="../assets/transfer-icons/debit.svg" alt="Débito">
-      </div>
-      <button>
-        Débito
-      </button>
-    </a>
-    
-    <a href="../charge/credit.html" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
-      <div>
-        <img src="../assets/transfer-icons/credit.svg" alt="Crédito">
-      </div>
-      <button>
-        Crédito
-      </button>
-    </a>
-
-    <a cl href=""ass="flex items-center justify-between pr-5 mt-8">
-      <div>
-        <div class="flex items-center gap-1 mb-2 text-xs text-black">
-          <img src="../assets/svg/vaadin_connect.svg" alt="">
-          Split de recebimento?
-        </div>
-        <label class="relative inline-flex items-center w-24 border rounded border-divider">
-          <input type="checkbox" value="" class="sr-only peer">
-          <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
-          </div>
-          <p class="absolute left-7 text-divider peer">Não</p>
+    <main class="min-h-screen px-5 pt-3 pb-48 mt-3 -translate-y-6 bg-main rounded-t-2xl">
+        <label for="description" class="font-['Poppins'] font-bold text-gray gap-2 mb-1 mt-4 flex items-center">
+            Escolha o(s) cliente(s)
         </label>
-      </div>
-
-      <div>
-        <div class="flex items-center gap-1 mb-2 text-xs text-black">
-          <img src="../assets/svg/vaadin_connect.svg" alt="">
-          Recorrente
+        <div class="flex w-full h-12 px-1 py-1 bg-white rounded-md">
+            <div class="bg-[#09F] text-white rounded-md w-64 text-base mr-2 flex justify-center items-center px-2 min-w-[253px] tag">
+                Nome sobrenome - CPF...
+                <a
+                    onclick="handleRemoveTag()"
+                    class="ml-4 cursor-pointer"
+                >
+                    <img src="../assets/svg/x.svg" alt="fechar">
+                </a>
+            </div>
+            <input
+                id="name"
+                class="bg-white placeholder:text-placeholder w-[20%] px-2 outline-none text-secondary"
+                type="text"
+                placeholder="Nome..."
+            >
         </div>
-        <label class="relative inline-flex items-center w-24 border rounded border-divider">
-          <input type="checkbox" value="" class="sr-only peer">
-          <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
-          </div>
-          <p class="absolute left-7 text-divider peer">Não</p>
-        </label>
-      </div>
-    </a>
 
-    <a href="./payment-link.html" class="block text-base font-bold text-center underline mt-14 text-primary mb-28">
-      Ir para Link de Pagamento
-    </a>
-  </main>
-
-  <nav aria-label="navegação-principal" class="fixed flex items-center justify-center w-full h-20 bg-white bomottom-0">
-    <ul class="flex gap-3">
-      <li>
-        <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
-          <span class="text-xs">Início</span>
+        <a href="./new-client.html"
+            class="flex items-center px-6 py-3 font-bold text-white bg-green max-w-[190px] rounded-xl mt-3">
+            <img class="w-6 h-6 mr-3" src="../assets/svg/fluent_person-add-20-filled.svg" alt="ícone usuário">
+            Novo Cliente
         </a>
-      </li>
 
-      <li>
-        <a href="../charge" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
-          <span class="text-xs">Cobrança</span>
-        </a>
-      </li>
+        <span class="block w-[75%] mx-auto my-8 border-b border-divider"></span>
 
-      <li>
-        <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
-          <span class="text-xs">Extrato</span>
-        </a>
-      </li>
+        <div class="flex items-center">
+            <span class="font-['Poppins'] text-sm text-gray mr-1">Selecione o meio de pagamento</span>
+            <span>
+                <img src="../assets/svg/tabler_hand-click.svg" alt="click">
+            </span>
+        </div>
 
-      <li>
-        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
-          <span class="text-xs">Perfil</span>
+        <a href="./boleto.html"
+            class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+            <div>
+                <img src="../assets/transfer-icons/boleto.svg" alt="boleto">
+            </div>
+            <button>
+                Boleto
+            </button>
         </a>
-      </li>
-    </ul>
-  </nav>
+
+        <a href="../pix/index.html"
+            class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+            <div>
+                <img src="../assets/transfer-icons/pix.svg" alt="pix">
+            </div>
+            <button>
+                Pix
+            </button>
+        </a>
+
+        <a href="#" class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+            <div>
+                <img src="../assets/transfer-icons/debit.svg" alt="Débito">
+            </div>
+            <button>
+                Débito
+            </button>
+        </a>
+
+        <a href="../charge/credit.html"
+            class="flex items-center justify-center gap-1 my-3 text-center btn-outline text-primary">
+            <div>
+                <img src="../assets/transfer-icons/credit.svg" alt="Crédito">
+            </div>
+            <button>
+                Crédito
+            </button>
+        </a>
+
+        <!-- Split receipt  -->
+        <div>
+            <div class="flex items-center gap-1 mb-2 text-xs text-black">
+                <img src="../assets/svg/vaadin_connect.svg" alt="">
+                Split de recebimento?
+            </div>
+            <label class="relative inline-flex items-center w-24 border rounded border-divider">
+                <input id="split-receipt" type="checkbox" onclick="handleToggleSplitReceipt()" class="sr-only peer">
+                <div
+                    class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+                </div>
+                <p class="absolute left-9 text-divider peer toggle-split">
+                    Não
+                </p>
+            </label>
+        </div>
+
+        <!-- Recurrent  -->
+        <div>
+            <div class="flex items-center gap-1 mb-2 text-xs text-black">
+                <img src="../assets/svg/vaadin_connect.svg" alt="">
+                Recorrente
+            </div>
+            <label class="relative inline-flex items-center w-24 border rounded border-divider">
+                <input id="recurrent" type="checkbox" class="sr-only peer" onclick="handleToggleRecurrent()">
+                <div
+                    class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+                </div>
+                <p class="absolute left-9 text-divider peer toggle-recurrent">
+                    Não
+                </p>
+            </label>
+        </div>
+
+        <a href="./payment-link.html" class="block text-base font-bold text-center underline mt-14 text-primary mb-28">
+            Ir para Link de Pagamento
+        </a>
+    </main>
+
+    <nav aria-label="navegação-principal"
+        class="fixed flex items-center justify-center w-full h-20 bg-white bomottom-0">
+        <ul class="flex gap-3">
+            <li>
+                <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+                    <span class="text-xs">Início</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../charge" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+                    <span class="text-xs">Cobrança</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+                    <span class="text-xs">Extrato</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+                    <span class="text-xs">Perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./js/validation/paymentMethods.js"></script>
 </body>
 
 </html>
