@@ -2,134 +2,176 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../dist/output.css">
-  <title>Simulador de Vendas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Simulador de Vendas</title>
 </head>
 
 <body class="bg-main">
-  <div class="pb-3 bg-secondary">
-    <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
-      <a href="../charge/credit.html">
-        <img src="../assets/svg/arrow-back.svg" alt="voltar">
-      </a>
-      <p class="font-sans text-base font-bold text-white ">
-        Simulador de Vendas
-      </p>
-      <div />
-    </header>
-  </div>
+    <div class="pb-3 bg-secondary">
+        <header class="flex items-center justify-between pl-3 pb-7 pr-11 pt-14">
+            <a href="../charge/credit.html">
+                <img src="../assets/svg/arrow-back.svg" alt="voltar">
+            </a>
+            <p class="font-sans text-base font-bold text-white ">
+                Simulador de Vendas
+            </p>
+            <div />
+        </header>
+    </div>
 
-  <main class="px-5 pb-20 mt-3 -translate-y-6 bg-main rounded-t-2xl">
-    <form class="py-4">
-      <label for="name" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
-        Valor
-      </label>
-      <input
-        id="name" 
-        placeholder="0,00"
-        class="mb-4 bg-white outline-none wrapper-input placeholder:text-gray focus:border-primary" 
-      >
+    <main class="px-5 pb-20 mt-3 -translate-y-6 bg-main rounded-t-2xl">
+        <form id="form" class="py-4">
+            <label for="money" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1">
+                Valor
+            </label>
+            <input
+                id="money"
+                type="text"
+                inputmode="numeric"
+                placeholder="0,00"
+                oninput="validateValue()"
+                class="bg-white outline-none wrapper-input placeholder:text-gray focus:border-primary"
+            >
+            <span class="text-xs text-red-600 error-money">Este campo é obrigatório</span>
 
-      <label for="countries" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">Bandeira do cartão</label>
-      <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
-        <option class="px-3 py-2">Master Card</option>
-        <option class="text-secondary">VISA</option>
-        <option class="text-secondary">Elo</option>
-        <option class="text-secondary">HiperCard</option>
-        <option class="text-secondary">American Express</option>
-        <option class="text-secondary">Outras Bandeiras</option>
-      </select>
+            <label for="card" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">
+                Bandeira do cartão
+            </label>
+            <select
+                id="card"
+                oninput="validateCard()"
+                class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12"
+            >
+                <option class="px-3 py-2">Master Card</option>
+                <option class="text-secondary">VISA</option>
+                <option class="text-secondary">Elo</option>
+                <option class="text-secondary">HiperCard</option>
+                <option class="text-secondary">American Express</option>
+                <option class="text-secondary">Outras Bandeiras</option>
+            </select>
+            <span class="text-xs text-red-600 error-card">Este campo é obrigatório</span>
 
-      <label for="countries" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">Forma de Pagamento</label>
-      <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
-        <option class="px-3 py-2" selected>Crédito</option>
-        <option class="text-secondary">Débito</option>
-        <option class="text-secondary">Boleto</option>
-        <option class="text-secondary">PIX</option>
-      </select>
+            <label for="payment"  class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">
+                Forma de Pagamento
+            </label>
+            <select
+                id="payment"
+                oninput="validatePaymentMethods()"
+                class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12"
+            >
+                <option class="px-3 py-2" selected>Crédito</option>
+                <option class="text-secondary">Débito</option>
+                <option class="text-secondary">Boleto</option>
+                <option class="text-secondary">PIX</option>
+            </select>
+            <span class="text-xs text-red-600 error-payment">Este campo é obrigatório</span>
 
-      <label for="countries" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">Parcelamento</label>
-      <select id="countries" class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12">
-        <option class="px-3 py-2" selected>À vista</option>
-        <option class="text-secondary">Parcelado em 2x</option>
-        <option class="text-secondary">Parcelado em 3x</option>
-        <option class="text-secondary">Parcelado em 4x</option>
-        <option class="text-secondary">Parcelado em 5x</option>
-        <option class="text-secondary">Parcelado em 6x</option>
-        <option class="text-secondary">Parcelado em 7x</option>
-        <option class="text-secondary">Parcelado em 8x</option>
-        <option class="text-secondary">Parcelado em 9x</option>
-        <option class="text-secondary">Parcelado em 10x</option>
-        <option class="text-secondary">Parcelado em 11x</option>
-        <option class="text-secondary">Parcelado em 12x</option>
-        
-      </select>
+            <label for="installment" class="font-['Poppins'] font-bold text-gray flex items-baseline gap-2 mb-1 mt-3">
+                Parcelamento
+            </label>
+            <select
+                id="installment"
+                oninput="validateInstallment()"
+                class="bg-white outline-none border border-divider text-gray text-sm rounded-lg block w-full p-2.5 focus:border-primary h-12"
+            >
+                <option class="px-3 py-2" selected>À vista</option>
+                <option class="text-secondary">Parcelado em 2x</option>
+                <option class="text-secondary">Parcelado em 3x</option>
+                <option class="text-secondary">Parcelado em 4x</option>
+                <option class="text-secondary">Parcelado em 5x</option>
+                <option class="text-secondary">Parcelado em 6x</option>
+                <option class="text-secondary">Parcelado em 7x</option>
+                <option class="text-secondary">Parcelado em 8x</option>
+                <option class="text-secondary">Parcelado em 9x</option>
+                <option class="text-secondary">Parcelado em 10x</option>
+                <option class="text-secondary">Parcelado em 11x</option>
+                <option class="text-secondary">Parcelado em 12x</option>
+            </select>
+            <span class="text-xs text-red-600 error-installment">Este campo é obrigatório</span>
 
-      <div class="block mt-4 mb-2 text-xs text-secondary">Repassar Juros?</div>
-      <label class="relative inline-flex items-center w-24 border rounded border-divider">
-        <input type="checkbox" value="" class="sr-only peer">
-        <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
-        </div>
-        <p class="absolute left-7 text-divider peer">Sim</p>
-      </label>
+            <!-- Juros  -->
+            <div>
+                <div class="flex items-center gap-1 mt-4 mb-2 text-xs text-black">
+                    Repassar Juros?
+                </div>
+                <label class="relative inline-flex items-center w-24 border rounded border-divider">
+                    <input
+                        id="juros"
+                        type="checkbox"
+                        class="sr-only peer"
+                        onclick="handleToggleJuros()"
+                    >
+                    <div class="h-10 w-5 rounded bg-green peer-focus:outline-none peer peer-checked:after:translate-x-4 peer-checked:after:border-green after:content-[''] after:absolute after:left-0 after:bg-green after:h-10 peer-checked:after:w-20 after:transition-all after:rounded-r">
+                    </div>
+                    <p class="absolute left-9 text-divider peer toggle-juros">
+                        Não
+                    </p>
+                </label>
+            </div>
 
-      <div class="flex items-center justify-between">
-        <p class="text-base font-medium text-secondary">Cliente paga</p>
-        <span class="font-bold text-secondary">R$0,00</span>
-      </div>
+            <div class="flex items-center justify-between">
+                <p class="text-base font-medium text-secondary">Cliente paga</p>
+                <span class="font-bold text-secondary">R$0,00</span>
+            </div>
 
-      <span class="block w-full mx-auto mt-4 mb-4 border-b border-divider"></span>
+            <span class="block w-full mx-auto mt-4 mb-4 border-b border-divider"></span>
 
-      <div class="flex items-center justify-between">
-        <p class="text-base font-medium text-secondary">Você recebe</p>
-        <span class="font-bold text-primary">R$0,00</span>
-      </div>
+            <div class="flex items-center justify-between">
+                <p class="text-base font-medium text-secondary">Você recebe</p>
+                <span class="font-bold text-primary">R$0,00</span>
+            </div>
 
-      <span class="block w-full mx-auto mt-4 mb-4 border-b border-divider"></span>
+            <span class="block w-full mx-auto mt-4 mb-4 border-b border-divider"></span>
 
-      <p class="text-xs text-gray">
-        *Para receber o valor integral, selecione a opção “Repassar Juros” e em seguida “Fazer nova simulação”
-      </p>
+            <p class="text-xs text-gray">
+                *Para receber o valor integral, selecione a opção “Repassar Juros” e em seguida “Fazer nova simulação”
+            </p>
 
-      <a href="" class="flex items-center justify-center mt-8 btn">
-        Fazer nova simulação
-      </a>
-    </form>
-  </main>
+            <div class="flex items-center justify-center">
+                <button type="submit"  class="flex items-center justify-center mt-8 btn submit">
+                    Fazer nova simulação
+                </button>
+            </div>
+        </form>
+    </main>
 
-  <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
-    <ul class="flex gap-3">
-      <li>
-        <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
-          <span class="text-xs">Início</span>
-        </a>
-      </li>
+    <nav aria-label="navegação-principal" class="fixed bottom-0 flex items-center justify-center w-full h-20 bg-white">
+        <ul class="flex gap-3">
+            <li>
+                <a href="../home" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/home.svg" alt="Início">
+                    <span class="text-xs">Início</span>
+                </a>
+            </li>
 
-      <li>
-        <a href="../charge/paymentMethods.html" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
-          <span class="text-xs">Cobrança</span>
-        </a>
-      </li>
+            <li>
+                <a href="../charge/paymentMethods.html" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/cobranca.svg" alt="Cobrança">
+                    <span class="text-xs">Cobrança</span>
+                </a>
+            </li>
 
-      <li>
-        <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
-          <span class="text-xs">Extrato</span>
-        </a>
-      </li>
+            <li>
+                <a href="../extract" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/extrato.svg" alt="Extrato">
+                    <span class="text-xs">Extrato</span>
+                </a>
+            </li>
 
-      <li>
-        <a href="#" class="flex flex-col items-center justify-center w-[74px]">
-          <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
-          <span class="text-xs">Perfil</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+            <li>
+                <a href="#" class="flex flex-col items-center justify-center w-[74px]">
+                    <img class="w-6 h-6" src="../assets/icons-home/profile.svg" alt="Perfil">
+                    <span class="text-xs">Perfil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
