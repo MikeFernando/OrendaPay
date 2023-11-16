@@ -858,6 +858,14 @@ html {
   margin-top: 2rem;
 }
 
+.-mt-\[2px\]{
+  margin-top: -2px;
+}
+
+.-mt-1{
+  margin-top: -0.25rem;
+}
+
 .block{
   display: block;
 }
