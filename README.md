@@ -16,7 +16,7 @@
 
 ## Detalhes do aplicativo
 
-- Construção de um aplicativo mobile multiplataforma capaz de gerenciar transações financeiras.  
+- Construção de um aplicativo capaz de gerenciar transações financeiras.  
 
 ## 🚀 Melhorias implementadas
 - [x] - Validações de campos vazios
