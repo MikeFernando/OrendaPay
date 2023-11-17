@@ -46,8 +46,7 @@ npm run dev
 ``` 
 
 ## 🌐 Links úteis
-[NodeJS](https://nodejs.org/en/download)  
-[Figma do projeto](https://www.figma.com/file/9oFvFCof9KMaxDsH9IhPjg/ToDo-List-%E2%80%A2-Mobile)
+[Figma do projeto](https://www.figma.com/file/RBxoF68CtgDzst9lTbqobQ/Orenda-Pay---APP?type=design&node-id=1-2&mode=design&t=cf7VLRoPa5Q0w8gf-0)
 
 
 ## 🧑‍💻 Mike Fernando
